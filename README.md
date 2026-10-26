@@ -1,6 +1,6 @@
 ## Setup
 
-Use Python 3.12 or newer. The Windows GUI also needs Tkinter.
+Use Python 3.12 or newer
 
 ```powershell
 python -m venv .venv
