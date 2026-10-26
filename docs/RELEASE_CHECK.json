@@ -1,0 +1,15 @@
+{
+  "checked_utc": "2026-10-26T03:04:44.362330+00:00",
+  "tests_passed": 230,
+  "test_groups": {
+    "existing_regression_tests": 227,
+    "portable_release_tests": 3
+  },
+  "static_scan_findings": [],
+  "core_source_files_byte_identical": 52,
+  "schema_dictionary_contents_unchanged": true,
+  "model_inference_run_during_cleanup": false,
+  "paid_api_calls": 0,
+  "original_experiment_results_modified": false,
+  "note": "Tests run using an existing Python runtime; no runtime or generated inputs are included in this folder."
+}

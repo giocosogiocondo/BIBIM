@@ -1,0 +1,99 @@
+{
+  "catalog_revision": "3.4.5.1",
+  "language": "en",
+  "provider": "IfcOpenShell bundled buildingSMART documentation and EXPRESS schema",
+  "provider_version": "0.8.5",
+  "schemas": {
+    "IFC2X3": {
+      "release": "2x3 TC1 (2.3.0.1)",
+      "compiled_schema": "IFC2X3",
+      "files": [
+        {
+          "name": "ifc2x3_entities.json",
+          "sha256": "b76c1b31673544370a885321993559c3857723c70b840e41db50327931bd25d1"
+        },
+        {
+          "name": "ifc2x3_properties.json",
+          "sha256": "d56bd3c0c4f7f2514e477ae54a90cd9275cdd232cabac54e2157a29b1aaf2228"
+        },
+        {
+          "name": "Pset_IFC2X3.ifc",
+          "sha256": "61a8732fbc35c5e911d7750e2be0e93ce7724e7eee751e9a6bfd71ebce7ef407"
+        }
+      ],
+      "schema_shape_sha256": "75c22c6007d5d4922ea8e9fb6a687ebd2459cb75ebd44a63bd9d197d43995198",
+      "legacy_quantity_file": {
+        "name": "ifc_sql_views\\data\\ifc2x3_quantities.json",
+        "sha256": "82411ab8f3a0dd1665a89b80cc0df77ea42d69ce5f750c6bab1458d4be874ccc"
+      }
+    },
+    "IFC4": {
+      "release": "4 ADD2 TC1 (4.0.2.1)",
+      "compiled_schema": "IFC4",
+      "files": [
+        {
+          "name": "ifc4_entities.json",
+          "sha256": "f164de9e34dd4964cee5605ccb5e1f41e48682136d5aed3147d8f679df0b82ed"
+        },
+        {
+          "name": "ifc4_properties.json",
+          "sha256": "d9533bd1e425d8e18ae743bafd6830d26b27bff3ee710ef7b90fe100ca5ce8db"
+        },
+        {
+          "name": "Pset_IFC4_ADD2.ifc",
+          "sha256": "5224cb82bea85ad4168e4a972fe410d1e4a727b55ae2127afbf2f623c4372bb1"
+        }
+      ],
+      "schema_shape_sha256": "5e3be2ab70882e67c18a0918a6c5a2c9dcbc5b402a913ac39e5dce2343cf40e9"
+    },
+    "IFC4X3_ADD2": {
+      "release": "4.3 ADD2 (4.3.2.0)",
+      "compiled_schema": "IFC4X3_ADD2",
+      "files": [
+        {
+          "name": "ifc4x3_entities.json",
+          "sha256": "c1334c534c433c436c1116b1d73e844ca8226df276c2470fdd058e28533ee976"
+        },
+        {
+          "name": "ifc4x3_properties.json",
+          "sha256": "f7d1941f4d088c5dabccc43d0e8e6ea1a148c845b144c2258433701e9945cb0f"
+        },
+        {
+          "name": "Pset_IFC4X3.ifc",
+          "sha256": "41c5b181eabd56da0c298c9adebc9c6f3aeebabb41f1c916848681f798aa8455"
+        }
+      ],
+      "schema_shape_sha256": "21d750e936c16316c4b1e7111e80f994b7314b582ec55b16fb2e10af78e10973"
+    }
+  },
+  "bibim_sources": {
+    "ifc_column_dictionary/__init__.py": "bb2bdfb907958f1328a65af611d309177de631a787fc43cf7daf84d7226006b3",
+    "ifc_column_dictionary/build.py": "36e334b2a90e91b9ef699aa4350fbcaf6bf6744c74d52c92dbd79c7ad3dabebb",
+    "ifc_column_dictionary/derived.py": "fef2579c7f626621866a55e09e345b4374c28927e880835c3cc4a999b7aa70d3",
+    "ifc_column_dictionary/resolver.py": "a1ae78ae3ce4a6d1aebca018f7236655f65c2201f1d4872479365fa0c83d0a7f",
+    "tools/build_column_description_catalog.py": "b61e86c427baab5ebc6bf894bfaaec08a581bec793013ef4758c65426693c616",
+    "ifc_sql_views/rules.py": "912226525e138ba06e4324a339d1ac1d94947456a445b4a08f9aae2628d8e0b6",
+    "ifc_sql_views/interpretation/__init__.py": "f08833266e0580fe8adf71ededa02e2df3fbba54476b813cbd95a8da7c36afdd",
+    "ifc_sql_views/interpretation/attributes.py": "b83334d72979c51d85352a78f9f29452674d1a0a3197c8d9b1e5721d9ff93b88",
+    "ifc_sql_views/interpretation/owner.py": "816be235bf17479e3b737cddb002fdfa560976553042d373f92d8e6eea15e143",
+    "ifc_sql_views/interpretation/placement.py": "a49934562f29c29d078eaf68ae1e1e9541bbf8d4ed307b400e55114417a47217",
+    "ifc_sql_views/interpretation/representation.py": "3299918adae376279b072da1dad23c04e2522e52ee33ce4cdc2a98cb09e3ad83",
+    "ifc_sql_views/interpretation/resources.py": "1ab3ee02e849d1c8ff6c873cea67552b3aa837cea95c85613fa500e8246b34f9",
+    "ifc_sql_views/interpretation/rows.py": "8b350a0d8f2f1935a858a51b64bf1a7a791cfa227eee5f223791bc7c8db5a98d",
+    "ifc_sql_views/extraction/__init__.py": "f08833266e0580fe8adf71ededa02e2df3fbba54476b813cbd95a8da7c36afdd",
+    "ifc_sql_views/extraction/properties.py": "efbc46853bff0f37ea6313ac89cd3051130493c6ccb53e1ee8c77fcedcd97458",
+    "ifc_sql_views/extraction/property_projection.py": "afd1fd4b1e9d65b26041eac301bedcbf3edfbfe5f186949b11817017ffcf3ce1",
+    "ifc_sql_views/extraction/provenance.py": "f1ed24b5c62eedbf0a3d79050fbd57de420e0126da014b81fc8f252ef1c3c516",
+    "ifc_sql_views/extraction/relations.py": "9af1ac24a188a9e340a451cf83d5acab85dac3b79287405f8d92dfc012f4e89f",
+    "ifc_sql_views/extraction/resources.py": "70ec06b99cc7497467a44da58f363a4b7570237f57e19a385e2af72f124bd208",
+    "ifc_sql_views/extraction/rows.py": "1145d924b65f93f678c6a7a21e6e63b3acb20c76046cb986c196b1107bdaf3be",
+    "ifc_sql_views/column_policy.py": "715f416fce5399543b2ca767655be91becde87e2074823e9dbd7956132d4a2ec"
+  },
+  "limitations": [
+    "Cached official prose is not a live-page completeness guarantee.",
+    "Missing prose uses an explicitly labelled schema signature, never another schema's prose.",
+    "BIBIM-derived descriptions are implementation definitions, not official buildingSMART SQL columns.",
+    "Custom property semantics are not invented.",
+    "Opening sentences are deterministic extracts; full descriptions remain available for conditions omitted from the opening."
+  ]
+}

@@ -1,0 +1,287 @@
+{
+  "format": "BIBIM-derived-column-definitions/1",
+  "language": "en",
+  "description_method": "bibim_implementation_definition",
+  "exact_columns": {
+    "ifc_id": "Numeric STEP instance identifier preserved in the raw database; join a main View and its CustomPset companion on this key.",
+    "ifc_class": "Actual IFC entity class of this row, including specialized classes folded into the main View.",
+    "etc": "JSON object containing populated sparse fields and fields exceeding SQLite's column limit; its keys depend on this database.",
+    "Placement_Type": "IFC object placement class; identifies the placement representation rather than a building element type.",
+    "Placement_Unit": "Native project length unit used for the interpreted placement coordinates.",
+    "Placement_BasisCurveType": "IFC class of the explicit basis curve used by a linear placement.",
+    "Owner_Name": "Owning person's given name and family name combined, with the person's identification as fallback.",
+    "Owner_Organization": "Name of the organization associated with the owning user in OwnerHistory.",
+    "LastModifiedBy_Name": "Last modifying person's given name and family name combined, with identification as fallback.",
+    "LastModifiedBy_Organization": "Organization name associated with the last modifying user in OwnerHistory.",
+    "Representation_Identifier": "Identifier of the object's shape representation, such as Body or Axis; multiple representations may produce multiple values.",
+    "Representation_Type": "Representation method recorded in IFC, such as SweptSolid or Brep; this is not the element's functional type.",
+    "Representation_ItemTypes": "IFC classes of explicit representation items; no tessellated geometry is inferred.",
+    "Storey_GlobalId": "GlobalId of a storey reached through explicit containment, aggregate or nesting ancestry; multiple storeys are retained.",
+    "Storey_Name": "Name of a storey reached through explicit containment, aggregate or nesting ancestry; no geometric membership is inferred.",
+    "Storey_Elevation": "Recorded elevation of the explicitly associated storey; this is not a geometry-derived element elevation.",
+    "ContainedSpace_GlobalId": "GlobalId of a space reached through explicit containment or its aggregate/nest ancestry; not a spatial overlap result.",
+    "ContainedSpace_Name": "Name of a space reached through explicit containment or its aggregate/nest ancestry; no geometric containment is inferred.",
+    "BoundarySpaces": "JSON array of distinct spaces linked by explicit space-boundary relationships, including GlobalId, Name and LongName; not necessarily the containing space.",
+    "Source_FileName": "FILE_NAME.name stored in the source IFC header; not the current SQLite filename.",
+    "Source_FileTimestamp": "Timestamp recorded in the source IFC FILE_NAME header; not the database conversion time.",
+    "Source_PreprocessorVersion": "Preprocessor version recorded in the source IFC FILE_NAME header.",
+    "Source_OriginatingSystem": "Originating software system recorded in the source IFC FILE_NAME header.",
+    "Source_FileDescription": "Description entries from the source IFC FILE_DESCRIPTION header, including an MVD declaration when present.",
+    "Source_IFCSchema": "Schema identifier recorded in the source IFC FILE_SCHEMA header; do not infer an exact release beyond that identifier.",
+    "Placement_X": "Model-coordinate X position after composing explicit parent placements and rotations; native project length unit, without CRS/map conversion.",
+    "Placement_XAxis_X": "Dimensionless X component of the transformed local XAxis direction in model coordinates; unavailable when a valid orientation cannot be resolved.",
+    "Placement_YAxis_X": "Dimensionless X component of the transformed local YAxis direction in model coordinates; unavailable when a valid orientation cannot be resolved.",
+    "Placement_ZAxis_X": "Dimensionless X component of the transformed local ZAxis direction in model coordinates; unavailable when a valid orientation cannot be resolved.",
+    "Placement_Y": "Model-coordinate Y position after composing explicit parent placements and rotations; native project length unit, without CRS/map conversion.",
+    "Placement_XAxis_Y": "Dimensionless Y component of the transformed local XAxis direction in model coordinates; unavailable when a valid orientation cannot be resolved.",
+    "Placement_YAxis_Y": "Dimensionless Y component of the transformed local YAxis direction in model coordinates; unavailable when a valid orientation cannot be resolved.",
+    "Placement_ZAxis_Y": "Dimensionless Y component of the transformed local ZAxis direction in model coordinates; unavailable when a valid orientation cannot be resolved.",
+    "Placement_Z": "Model-coordinate Z position after composing explicit parent placements and rotations; native project length unit, without CRS/map conversion.",
+    "Placement_XAxis_Z": "Dimensionless Z component of the transformed local XAxis direction in model coordinates; unavailable when a valid orientation cannot be resolved.",
+    "Placement_YAxis_Z": "Dimensionless Z component of the transformed local YAxis direction in model coordinates; unavailable when a valid orientation cannot be resolved.",
+    "Placement_ZAxis_Z": "Dimensionless Z component of the transformed local ZAxis direction in model coordinates; unavailable when a valid orientation cannot be resolved."
+  },
+  "patterns": {
+    "<TypeOrStyle>_<field>": "Attribute of the assigned IFC type/style, folded into the occurrence row; multiple assignments can yield multiple values.",
+    "<field>_<uniform-unit>": "Original measurement value with its uniform unit encoded in the physical column name; values are not rescaled.",
+    "<field>_Unit": "Unit label associated with the measurement field; a separate column remains when uniform-unit folding is not applicable.",
+    "Owner_<date>_UTC": "OwnerHistory timestamp interpreted as an ISO-format UTC date and time.",
+    "<resource-path>_<attribute>": "Forward resource attribute flattened into the owning object's row, bounded by the converter's resource traversal rules.",
+    "<role>_Count": "Count of distinct relationship target IDs for this role, not a count of arbitrary nested JSON entries.",
+    "<role>_Names": "Names of relationship targets; these are labels and are not guaranteed to be unique identifiers.",
+    "<role>": "Recorded relationship targets as an object or JSON array; inspect the representation and preserve relevant membership multiplicity.",
+    "<inverse>_<endpoint>_<field>": "Field reached through an EXPRESS-declared inverse and a relationship endpoint; no universal meaning is assigned from name similarity."
+  },
+  "relationship_roles": [
+    {
+      "relationship": "IfcRelAggregates",
+      "incoming_attribute": "RelatedObjects",
+      "role": "AggregateParent",
+      "target_attribute": "RelatingObject",
+      "single_role": true,
+      "description": "AggregateParent targets reached through IfcRelAggregates.RelatingObject when the current object is referenced by RelatedObjects."
+    },
+    {
+      "relationship": "IfcRelAggregates",
+      "incoming_attribute": "RelatingObject",
+      "role": "AggregateChildren",
+      "target_attribute": "RelatedObjects",
+      "single_role": false,
+      "description": "AggregateChildren targets reached through IfcRelAggregates.RelatedObjects when the current object is referenced by RelatingObject."
+    },
+    {
+      "relationship": "IfcRelAssignsToGroup",
+      "incoming_attribute": "RelatedObjects",
+      "role": "Groups",
+      "target_attribute": "RelatingGroup",
+      "single_role": false,
+      "description": "Groups targets reached through IfcRelAssignsToGroup.RelatingGroup when the current object is referenced by RelatedObjects."
+    },
+    {
+      "relationship": "IfcRelAssignsToGroup",
+      "incoming_attribute": "RelatingGroup",
+      "role": "GroupMembers",
+      "target_attribute": "RelatedObjects",
+      "single_role": false,
+      "description": "GroupMembers targets reached through IfcRelAssignsToGroup.RelatedObjects when the current object is referenced by RelatingGroup."
+    },
+    {
+      "relationship": "IfcRelAssociatesClassification",
+      "incoming_attribute": "RelatedObjects",
+      "role": "Classification",
+      "target_attribute": "RelatingClassification",
+      "single_role": false,
+      "description": "Classification targets reached through IfcRelAssociatesClassification.RelatingClassification when the current object is referenced by RelatedObjects."
+    },
+    {
+      "relationship": "IfcRelAssociatesDocument",
+      "incoming_attribute": "RelatedObjects",
+      "role": "Document",
+      "target_attribute": "RelatingDocument",
+      "single_role": false,
+      "description": "Document targets reached through IfcRelAssociatesDocument.RelatingDocument when the current object is referenced by RelatedObjects."
+    },
+    {
+      "relationship": "IfcRelAssociatesLibrary",
+      "incoming_attribute": "RelatedObjects",
+      "role": "Library",
+      "target_attribute": "RelatingLibrary",
+      "single_role": false,
+      "description": "Library targets reached through IfcRelAssociatesLibrary.RelatingLibrary when the current object is referenced by RelatedObjects."
+    },
+    {
+      "relationship": "IfcRelAssociatesMaterial",
+      "incoming_attribute": "RelatedObjects",
+      "role": "Material",
+      "target_attribute": "RelatingMaterial",
+      "single_role": false,
+      "description": "Material targets reached through IfcRelAssociatesMaterial.RelatingMaterial when the current object is referenced by RelatedObjects."
+    },
+    {
+      "relationship": "IfcRelConnectsElements",
+      "incoming_attribute": "RelatedElement",
+      "role": "ConnectedFrom",
+      "target_attribute": "RelatingElement",
+      "single_role": false,
+      "description": "ConnectedFrom targets reached through IfcRelConnectsElements.RelatingElement when the current object is referenced by RelatedElement."
+    },
+    {
+      "relationship": "IfcRelConnectsElements",
+      "incoming_attribute": "RelatingElement",
+      "role": "ConnectedTo",
+      "target_attribute": "RelatedElement",
+      "single_role": false,
+      "description": "ConnectedTo targets reached through IfcRelConnectsElements.RelatedElement when the current object is referenced by RelatingElement."
+    },
+    {
+      "relationship": "IfcRelConnectsPortToElement",
+      "incoming_attribute": "RelatedElement",
+      "role": "Ports",
+      "target_attribute": "RelatingPort",
+      "single_role": false,
+      "description": "Ports targets reached through IfcRelConnectsPortToElement.RelatingPort when the current object is referenced by RelatedElement."
+    },
+    {
+      "relationship": "IfcRelConnectsPortToElement",
+      "incoming_attribute": "RelatingPort",
+      "role": "PortHost",
+      "target_attribute": "RelatedElement",
+      "single_role": true,
+      "description": "PortHost targets reached through IfcRelConnectsPortToElement.RelatedElement when the current object is referenced by RelatingPort."
+    },
+    {
+      "relationship": "IfcRelConnectsPorts",
+      "incoming_attribute": "RelatedPort",
+      "role": "ConnectedPortsFrom",
+      "target_attribute": "RelatingPort",
+      "single_role": false,
+      "description": "ConnectedPortsFrom targets reached through IfcRelConnectsPorts.RelatingPort when the current object is referenced by RelatedPort."
+    },
+    {
+      "relationship": "IfcRelConnectsPorts",
+      "incoming_attribute": "RelatingPort",
+      "role": "ConnectedPortsTo",
+      "target_attribute": "RelatedPort",
+      "single_role": false,
+      "description": "ConnectedPortsTo targets reached through IfcRelConnectsPorts.RelatedPort when the current object is referenced by RelatingPort."
+    },
+    {
+      "relationship": "IfcRelContainedInSpatialStructure",
+      "incoming_attribute": "RelatedElements",
+      "role": "Container",
+      "target_attribute": "RelatingStructure",
+      "single_role": true,
+      "description": "Container targets reached through IfcRelContainedInSpatialStructure.RelatingStructure when the current object is referenced by RelatedElements."
+    },
+    {
+      "relationship": "IfcRelContainedInSpatialStructure",
+      "incoming_attribute": "RelatingStructure",
+      "role": "ContainedElements",
+      "target_attribute": "RelatedElements",
+      "single_role": false,
+      "description": "ContainedElements targets reached through IfcRelContainedInSpatialStructure.RelatedElements when the current object is referenced by RelatingStructure."
+    },
+    {
+      "relationship": "IfcRelDefinesByType",
+      "incoming_attribute": "RelatedObjects",
+      "role": "Type",
+      "target_attribute": "RelatingType",
+      "single_role": true,
+      "description": "Type targets reached through IfcRelDefinesByType.RelatingType when the current object is referenced by RelatedObjects."
+    },
+    {
+      "relationship": "IfcRelDefinesByType",
+      "incoming_attribute": "RelatingType",
+      "role": "TypedObjects",
+      "target_attribute": "RelatedObjects",
+      "single_role": false,
+      "description": "TypedObjects targets reached through IfcRelDefinesByType.RelatedObjects when the current object is referenced by RelatingType."
+    },
+    {
+      "relationship": "IfcRelFillsElement",
+      "incoming_attribute": "RelatedBuildingElement",
+      "role": "FilledOpening",
+      "target_attribute": "RelatingOpeningElement",
+      "single_role": true,
+      "description": "FilledOpening targets reached through IfcRelFillsElement.RelatingOpeningElement when the current object is referenced by RelatedBuildingElement."
+    },
+    {
+      "relationship": "IfcRelFillsElement",
+      "incoming_attribute": "RelatingOpeningElement",
+      "role": "Fillings",
+      "target_attribute": "RelatedBuildingElement",
+      "single_role": false,
+      "description": "Fillings targets reached through IfcRelFillsElement.RelatedBuildingElement when the current object is referenced by RelatingOpeningElement."
+    },
+    {
+      "relationship": "IfcRelNests",
+      "incoming_attribute": "RelatedObjects",
+      "role": "NestParent",
+      "target_attribute": "RelatingObject",
+      "single_role": true,
+      "description": "NestParent targets reached through IfcRelNests.RelatingObject when the current object is referenced by RelatedObjects."
+    },
+    {
+      "relationship": "IfcRelNests",
+      "incoming_attribute": "RelatingObject",
+      "role": "NestChildren",
+      "target_attribute": "RelatedObjects",
+      "single_role": false,
+      "description": "NestChildren targets reached through IfcRelNests.RelatedObjects when the current object is referenced by RelatingObject."
+    },
+    {
+      "relationship": "IfcRelReferencedInSpatialStructure",
+      "incoming_attribute": "RelatedElements",
+      "role": "ReferencedStructures",
+      "target_attribute": "RelatingStructure",
+      "single_role": false,
+      "description": "ReferencedStructures targets reached through IfcRelReferencedInSpatialStructure.RelatingStructure when the current object is referenced by RelatedElements."
+    },
+    {
+      "relationship": "IfcRelReferencedInSpatialStructure",
+      "incoming_attribute": "RelatingStructure",
+      "role": "ReferencedElements",
+      "target_attribute": "RelatedElements",
+      "single_role": false,
+      "description": "ReferencedElements targets reached through IfcRelReferencedInSpatialStructure.RelatedElements when the current object is referenced by RelatingStructure."
+    },
+    {
+      "relationship": "IfcRelSpaceBoundary",
+      "incoming_attribute": "RelatedBuildingElement",
+      "role": "BoundarySpaces",
+      "target_attribute": "RelatingSpace",
+      "single_role": false,
+      "description": "BoundarySpaces targets reached through IfcRelSpaceBoundary.RelatingSpace when the current object is referenced by RelatedBuildingElement."
+    },
+    {
+      "relationship": "IfcRelSpaceBoundary",
+      "incoming_attribute": "RelatingSpace",
+      "role": "BoundaryElements",
+      "target_attribute": "RelatedBuildingElement",
+      "single_role": false,
+      "description": "BoundaryElements targets reached through IfcRelSpaceBoundary.RelatedBuildingElement when the current object is referenced by RelatingSpace."
+    },
+    {
+      "relationship": "IfcRelVoidsElement",
+      "incoming_attribute": "RelatedOpeningElement",
+      "role": "OpeningHost",
+      "target_attribute": "RelatingBuildingElement",
+      "single_role": true,
+      "description": "OpeningHost targets reached through IfcRelVoidsElement.RelatingBuildingElement when the current object is referenced by RelatedOpeningElement."
+    },
+    {
+      "relationship": "IfcRelVoidsElement",
+      "incoming_attribute": "RelatingBuildingElement",
+      "role": "Openings",
+      "target_attribute": "RelatedOpeningElement",
+      "single_role": false,
+      "description": "Openings targets reached through IfcRelVoidsElement.RelatedOpeningElement when the current object is referenced by RelatingBuildingElement."
+    }
+  ],
+  "custom_properties": "User/exporter-defined field: retain its exact name and observed values/statistics; its semantic meaning is not inferred from an official IFC field with a similar name.",
+  "limitations": [
+    "These are BIBIM implementation definitions, not official buildingSMART SQL column definitions.",
+    "Property availability, units, cardinality and JSON packing depend on the input database.",
+    "LIST order and repeated material members are preserved; SET presentation order is not construction order."
+  ]
+}

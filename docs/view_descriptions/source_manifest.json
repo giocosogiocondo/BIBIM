@@ -1,0 +1,47 @@
+{
+  "catalog_revision": "2026-10-17.1",
+  "language": "en",
+  "provider": "IfcOpenShell bundled buildingSMART documentation cache",
+  "provider_version": "0.8.5",
+  "authority": "buildingSMART International",
+  "authority_url": "https://standards.buildingsmart.org/",
+  "source_access": "Descriptions are based on pinned bundled documentation, with official entity source URLs. The build does not download or certify every live page. The cached IFC4X3 documentation uses a historical documentation hostname; the source_url field points to the current RELEASE publication.",
+  "summary_overrides_sha256": "f003023037f4d6c02a8d9db43e44cf499daa65785a8a62ddd3f6480ae67c8131",
+  "schemas": {
+    "IFC2X3": {
+      "release": "2x3 TC1 (2.3.0.1)",
+      "compiled_schema": "IFC2X3",
+      "documentation_file": "ifc2x3_entities.json",
+      "documentation_sha256": "b76c1b31673544370a885321993559c3857723c70b840e41db50327931bd25d1",
+      "compiled_entity_shape_sha256": "f1f3d6eab375e25939f6b89b21efee1a773e89d070dc1b361ccbf859e0878c9c"
+    },
+    "IFC4": {
+      "release": "4 ADD2 TC1 (4.0.2.1)",
+      "compiled_schema": "IFC4",
+      "documentation_file": "ifc4_entities.json",
+      "documentation_sha256": "f164de9e34dd4964cee5605ccb5e1f41e48682136d5aed3147d8f679df0b82ed",
+      "compiled_entity_shape_sha256": "2373e2e673d09eeb6761d7388f0f8c7241c4a2aa1281647f0343c1aec372ea71"
+    },
+    "IFC4X3_ADD2": {
+      "release": "4.3 ADD2 (4.3.2.0)",
+      "compiled_schema": "IFC4X3_ADD2",
+      "documentation_file": "ifc4x3_entities.json",
+      "documentation_sha256": "c1334c534c433c436c1116b1d73e844ca8226df276c2470fdd058e28533ee976",
+      "compiled_entity_shape_sha256": "d58800ed9ce762689cd273ae4036bfa4d8a08d1d33d8c68702e4e5da80325f0e"
+    }
+  },
+  "additional_source_checks": {
+    "IFC2X3.IfcBeam": {
+      "url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgelements/lexical/ifcbeam.htm",
+      "note": "The full buildingSMART definition states that the beam need not be load bearing; the bundled opening paragraph only contains the ISO definition."
+    },
+    "IFC2X3.IfcStructuralItem": {
+      "url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcstructuralanalysisdomain/lexical/ifcstructuralitem.htm",
+      "note": "The bundled description contains only a malformed heading. The replacement uses the official entity definition, not another IFC version's definition."
+    },
+    "IFC4X3_ADD2.IfcAlignment": {
+      "url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC4_3/HTML/lexical/IfcAlignment.htm",
+      "note": "The opening sentence refers to three concepts without defining them. The replacement uses the official definition's linear positioning and infrastructure layout explanation."
+    }
+  }
+}

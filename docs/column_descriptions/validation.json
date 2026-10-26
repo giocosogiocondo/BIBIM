@@ -1,0 +1,64 @@
+{
+  "passed": true,
+  "catalog_revision": "3.4.5.1",
+  "schemas": {
+    "IFC2X3": {
+      "entities": 653,
+      "declared_attributes": 1320,
+      "inherited_attribute_bindings": 4014,
+      "attribute_methods": {
+        "official_opening_sentence": 1219,
+        "schema_signature": 101
+      },
+      "property_sets": 317,
+      "quantity_sets": 0,
+      "properties_and_quantities": 1852,
+      "property_methods": {
+        "official_opening_sentence": 1850,
+        "schema_signature": 2
+      }
+    },
+    "IFC4": {
+      "entities": 776,
+      "declared_attributes": 1491,
+      "inherited_attribute_bindings": 5264,
+      "attribute_methods": {
+        "official_opening_sentence": 1224,
+        "schema_signature": 267
+      },
+      "property_sets": 422,
+      "quantity_sets": 93,
+      "properties_and_quantities": 2816,
+      "property_methods": {
+        "official_opening_sentence": 2788,
+        "schema_signature": 28
+      }
+    },
+    "IFC4X3_ADD2": {
+      "entities": 876,
+      "declared_attributes": 1644,
+      "inherited_attribute_bindings": 6004,
+      "attribute_methods": {
+        "official_opening_sentence": 1291,
+        "schema_signature": 353
+      },
+      "property_sets": 645,
+      "quantity_sets": 115,
+      "properties_and_quantities": 3988,
+      "property_methods": {
+        "official_opening_sentence": 3980,
+        "schema_signature": 8
+      }
+    }
+  },
+  "files_sha256": {
+    "IFC2X3.en.json": "796b198de079a0f497e5b8ec4b24399b65e27583e653ba976df9d8e2e488997c",
+    "IFC4.en.json": "77765ad21f1f463b7144bbeae2f23986534408148f727cdd9f84fd295b828b31",
+    "IFC4X3_ADD2.en.json": "515db9433df75fb6c8966b98b592b7c4b433c2550ac4295b0bb9418c8ed0673a",
+    "derived_columns.en.json": "1a3ba66fc39c17de63332d27d827a4847d7fe98c827c32985c3dc9c56537691b",
+    "source_manifest.json": "a02f4edb09f4eb5d4a95f071e48ed4172267d40ed7430648fdca9a0530357c26"
+  },
+  "model_loaded": false,
+  "inference_executed": false,
+  "scope": "Schema-wide catalogs only; private database coverage artifacts are not distributed."
+}

@@ -1,0 +1,42 @@
+# Python and local tools
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.cache/
+.tools/
+# Local inputs, model/runtime binaries and generated outputs
+data/
+models/
+runtime/
+outputs*/
+results/
+logs/
+prepared*/
+*.ifc
+*.ifczip
+*.gguf
+*.safetensors
+*.sqlite
+*.sqlite-*
+*.db
+*.db-*
+*.build.json
+*.log
+*.lock
+*.exe
+*.dll
+*.zip
+# Credentials and machine-specific configuration
+.env
+.env.*
+*.pem
+*.key
+configs/*.local.json
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

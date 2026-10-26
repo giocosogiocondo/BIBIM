@@ -1,0 +1,20 @@
+{
+  "key": "gemma-4-31b",
+  "model": "google/gemma-4-31B-it",
+  "revision": "842da3794eaa0b77d5f08bae87a17459d91ff475",
+  "served_name": "decisio-gemma-4-31b-it-letters",
+  "softcap": 30.0,
+  "temperature": 5.252,
+  "choice_temperature": 4.672,
+  "system_prompt": true,
+  "prompt_tail": "spaced",
+  "answer_slot": "template",
+  "label_variants": "summed",
+  "system_prompt_text": "You are a calibration engine. You never answer in prose. You are given a state, a question and a numbered set of options, and you choose exactly one option. You reply with that option's LETTER and nothing else — a single character, no words, no punctuation, no explanation.",
+  "answer_line": "Answer with the letter of exactly one option, and nothing else:",
+  "source_release": "v0.15.0",
+  "source_commit": "37976c176b8b8cfeb218b37bae17d4e23769999f",
+  "local_backend": "llama.cpp GGUF adaptation",
+  "official_server": false,
+  "calibration_validated_for_local_quantization": false
+}

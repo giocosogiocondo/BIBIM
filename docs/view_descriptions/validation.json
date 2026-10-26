@@ -1,0 +1,79 @@
+{
+  "passed": true,
+  "catalog_revision": "2026-10-17.1",
+  "schemas": {
+    "IFC2X3": {
+      "default_view_groups": 106,
+      "concrete_occurrence_classes": 111,
+      "abstract_reference_classes": 25,
+      "folded_class_aliases": {
+        "IfcStructuralCurveMemberVarying": "View_StructuralCurveMember",
+        "IfcStructuralLinearActionVarying": "View_StructuralLinearAction",
+        "IfcStructuralPlanarActionVarying": "View_StructuralPlanarAction",
+        "IfcStructuralSurfaceMemberVarying": "View_StructuralSurfaceMember",
+        "IfcWallStandardCase": "View_Wall"
+      },
+      "excluded_type_and_style_classes": 97,
+      "summary_methods": {
+        "short_source_sentence": 90,
+        "source_based_paraphrase": 46
+      }
+    },
+    "IFC4": {
+      "default_view_groups": 176,
+      "concrete_occurrence_classes": 189,
+      "abstract_reference_classes": 26,
+      "folded_class_aliases": {
+        "IfcBeamStandardCase": "View_Beam",
+        "IfcColumnStandardCase": "View_Column",
+        "IfcDoorStandardCase": "View_Door",
+        "IfcMemberStandardCase": "View_Member",
+        "IfcOpeningStandardCase": "View_OpeningElement",
+        "IfcPlateStandardCase": "View_Plate",
+        "IfcSlabElementedCase": "View_Slab",
+        "IfcSlabStandardCase": "View_Slab",
+        "IfcStructuralCurveMemberVarying": "View_StructuralCurveMember",
+        "IfcStructuralSurfaceMemberVarying": "View_StructuralSurfaceMember",
+        "IfcWallElementedCase": "View_Wall",
+        "IfcWallStandardCase": "View_Wall",
+        "IfcWindowStandardCase": "View_Window"
+      },
+      "excluded_type_and_style_classes": 138,
+      "summary_methods": {
+        "short_source_sentence": 150,
+        "source_based_paraphrase": 65
+      }
+    },
+    "IFC4X3_ADD2": {
+      "default_view_groups": 224,
+      "concrete_occurrence_classes": 227,
+      "abstract_reference_classes": 30,
+      "folded_class_aliases": {
+        "IfcStructuralCurveMemberVarying": "View_StructuralCurveMember",
+        "IfcStructuralSurfaceMemberVarying": "View_StructuralSurfaceMember",
+        "IfcWallStandardCase": "View_Wall"
+      },
+      "excluded_type_and_style_classes": 158,
+      "summary_methods": {
+        "short_source_sentence": 179,
+        "source_based_paraphrase": 78
+      }
+    }
+  },
+  "total_versioned_default_view_groups": 506,
+  "unique_default_view_names_across_schemas": 242,
+  "files_sha256": {
+    "IFC2X3.en.json": "2cfebf90b637d9784e25ac86a5662ab8af37d3075a8b9b2b188a2d348c119463",
+    "IFC4.en.json": "07d887bc5faf4a36c40666681383904f4fa18d46f1c97049ecdff5f6f9cb2236",
+    "IFC4X3_ADD2.en.json": "e8d3c20d097c777a63c44355772ae1861c66f942da6e603442b2d02ff1c0be08",
+    "routing_options.en.json": "1e39839b37a1cd179afd91f3ddd374cc9b7fe2eb5295d41d7ab51a86101e32ac",
+    "source_manifest.json": "24c495da4c594d4a037447bbbe8c1bb9009605ec03cf2f0fcb8981877d3297a1"
+  },
+  "limits": [
+    "Source URLs are provenance references, not a claim that every live page was fetched.",
+    "The catalog describes IFC semantics, not property presence in a particular database.",
+    "Default routing candidates exclude abstract classes and fold types/styles and specialized aliases.",
+    "No model inference, SQL generation, IFC conversion, or evaluation benchmark was run."
+  ],
+  "scope": "Schema-wide catalogs only; private database coverage artifacts are not distributed."
+}

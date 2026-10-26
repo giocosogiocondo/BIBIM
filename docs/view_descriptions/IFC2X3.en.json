@@ -1,0 +1,3642 @@
+{
+  "catalog_revision": "2026-10-17.1",
+  "language": "en",
+  "schema": "IFC2X3",
+  "release": "2x3 TC1 (2.3.0.1)",
+  "description_scope": "IFC entity semantics only; no claim of actual field availability",
+  "default_view_grouping": "BIBIM 3.4.5 entity-pairs default class selection",
+  "views": {
+    "View_ActionRequest": {
+      "entity": "IfcActionRequest",
+      "description": "An IfcActionRequest is a request for an action to fulfill a need.",
+      "description_method": "short_source_sentence",
+      "main_view": "View_ActionRequest",
+      "custom_view": "View_ActionRequestCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcActionRequest"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcfacilitiesmgmtdomain/lexical/ifcactionrequest.htm"
+    },
+    "View_Actor": {
+      "entity": "IfcActor",
+      "description": "The IfcActor defines all actors or human agents involved in a project during its full life cycle.",
+      "description_method": "short_source_sentence",
+      "main_view": "View_Actor",
+      "custom_view": "View_ActorCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcActor"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifckernel/lexical/ifcactor.htm"
+    },
+    "View_Annotation": {
+      "entity": "IfcAnnotation",
+      "description": "A graphical annotation that adds notes or meaning to objects within the project's geometric and spatial context.",
+      "description_method": "source_based_paraphrase",
+      "main_view": "View_Annotation",
+      "custom_view": "View_AnnotationCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcAnnotation"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcproductextension/lexical/ifcannotation.htm"
+    },
+    "View_Asset": {
+      "entity": "IfcAsset",
+      "description": "An identifiable group of elements treated as one asset with financial value.",
+      "description_method": "source_based_paraphrase",
+      "main_view": "View_Asset",
+      "custom_view": "View_AssetCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcAsset"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedfacilitieselements/lexical/ifcasset.htm"
+    },
+    "View_Beam": {
+      "entity": "IfcBeam",
+      "description": "An individual beam, usually horizontal or nearly horizontal. It is not necessarily load bearing.",
+      "description_method": "source_based_paraphrase",
+      "main_view": "View_Beam",
+      "custom_view": "View_BeamCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcBeam"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgelements/lexical/ifcbeam.htm"
+    },
+    "View_Building": {
+      "entity": "IfcBuilding",
+      "description": "A structure intended to shelter occupants or contents and normally remain permanently in one place.",
+      "description_method": "source_based_paraphrase",
+      "main_view": "View_Building",
+      "custom_view": "View_BuildingCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcBuilding"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcproductextension/lexical/ifcbuilding.htm"
+    },
+    "View_BuildingElementPart": {
+      "entity": "IfcBuildingElementPart",
+      "description": "Layers or major components as subordinate parts of a building element.",
+      "description_method": "short_source_sentence",
+      "main_view": "View_BuildingElementPart",
+      "custom_view": "View_BuildingElementPartCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcBuildingElementPart"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcstructuralelementsdomain/lexical/ifcbuildingelementpart.htm"
+    },
+    "View_BuildingElementProxy": {
+      "entity": "IfcBuildingElementProxy",
+      "description": "An element represented without a more specific predefined semantic class for the element it represents.",
+      "description_method": "source_based_paraphrase",
+      "main_view": "View_BuildingElementProxy",
+      "custom_view": "View_BuildingElementProxyCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcBuildingElementProxy"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcproductextension/lexical/ifcbuildingelementproxy.htm"
+    },
+    "View_BuildingStorey": {
+      "entity": "IfcBuildingStorey",
+      "description": "The building storey has an elevation and typically represents a (nearly) horizontal aggregation of spaces that are vertically bound.",
+      "description_method": "short_source_sentence",
+      "main_view": "View_BuildingStorey",
+      "custom_view": "View_BuildingStoreyCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcBuildingStorey"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcproductextension/lexical/ifcbuildingstorey.htm"
+    },
+    "View_ChamferEdgeFeature": {
+      "entity": "IfcChamferEdgeFeature",
+      "description": "An edge feature with a chamfered cross section shape.",
+      "description_method": "short_source_sentence",
+      "main_view": "View_ChamferEdgeFeature",
+      "custom_view": "View_ChamferEdgeFeatureCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcChamferEdgeFeature"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedcomponentelements/lexical/ifcchamferedgefeature.htm"
+    },
+    "View_Column": {
+      "entity": "IfcColumn",
+      "description": "A usually vertical structural member that transfers forces to its base, primarily through compression.",
+      "description_method": "source_based_paraphrase",
+      "main_view": "View_Column",
+      "custom_view": "View_ColumnCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcColumn"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgelements/lexical/ifccolumn.htm"
+    },
+    "View_Condition": {
+      "entity": "IfcCondition",
+      "description": "An IfcCondition determines the state or condition of an element at a particular point in time.",
+      "description_method": "short_source_sentence",
+      "main_view": "View_Condition",
+      "custom_view": "View_ConditionCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcCondition"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcfacilitiesmgmtdomain/lexical/ifccondition.htm"
+    },
+    "View_ConditionCriterion": {
+      "entity": "IfcConditionCriterion",
+      "description": "An IfcConditionCriterion is a particular measured or assessed criterion that contributes to the overall condition of an artifact.",
+      "description_method": "short_source_sentence",
+      "main_view": "View_ConditionCriterion",
+      "custom_view": "View_ConditionCriterionCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcConditionCriterion"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcfacilitiesmgmtdomain/lexical/ifcconditioncriterion.htm"
+    },
+    "View_ConstructionEquipmentResource": {
+      "entity": "IfcConstructionEquipmentResource",
+      "description": "An IfcConstructionEquipmentResource is a type of construction equipment that is used as resource to assist in the performance of construction.",
+      "description_method": "short_source_sentence",
+      "main_view": "View_ConstructionEquipmentResource",
+      "custom_view": "View_ConstructionEquipmentResourceCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcConstructionEquipmentResource"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcconstructionmgmtdomain/lexical/ifcconstructionequipmentresource.htm"
+    },
+    "View_ConstructionMaterialResource": {
+      "entity": "IfcConstructionMaterialResource",
+      "description": "An IfcConstructionMaterialResource identifies a material resource type in a construction project.",
+      "description_method": "short_source_sentence",
+      "main_view": "View_ConstructionMaterialResource",
+      "custom_view": "View_ConstructionMaterialResourceCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcConstructionMaterialResource"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcconstructionmgmtdomain/lexical/ifcconstructionmaterialresource.htm"
+    },
+    "View_ConstructionProductResource": {
+      "entity": "IfcConstructionProductResource",
+      "description": "An IfcConstructionProductResource defines the role of a product that is consumed (wholly or partially), or occupied (i.e. used) in the performance of construction.",
+      "description_method": "short_source_sentence",
+      "main_view": "View_ConstructionProductResource",
+      "custom_view": "View_ConstructionProductResourceCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcConstructionProductResource"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcconstructionmgmtdomain/lexical/ifcconstructionproductresource.htm"
+    },
+    "View_CostItem": {
+      "entity": "IfcCostItem",
+      "description": "A cost or financial value with contextual information, used as an item within a cost schedule.",
+      "description_method": "source_based_paraphrase",
+      "main_view": "View_CostItem",
+      "custom_view": "View_CostItemCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcCostItem"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedmgmtelements/lexical/ifccostitem.htm"
+    },
+    "View_CostSchedule": {
+      "entity": "IfcCostSchedule",
+      "description": "A collection of cost items for an estimate, bill of quantities, work order, or another cost-related presentation.",
+      "description_method": "source_based_paraphrase",
+      "main_view": "View_CostSchedule",
+      "custom_view": "View_CostScheduleCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcCostSchedule"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedmgmtelements/lexical/ifccostschedule.htm"
+    },
+    "View_Covering": {
+      "entity": "IfcCovering",
+      "description": "A finishing or protective covering applied to a surface or element, such as flooring, ceiling, cladding, insulation, or roofing.",
+      "description_method": "source_based_paraphrase",
+      "main_view": "View_Covering",
+      "custom_view": "View_CoveringCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcCovering"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcproductextension/lexical/ifccovering.htm"
+    },
+    "View_CrewResource": {
+      "entity": "IfcCrewResource",
+      "description": "An IfcCrewResource represents a type of resource used in construction processes, i.e. construction crew resource.",
+      "description_method": "short_source_sentence",
+      "main_view": "View_CrewResource",
+      "custom_view": "View_CrewResourceCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcCrewResource"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcconstructionmgmtdomain/lexical/ifccrewresource.htm"
+    },
+    "View_CurtainWall": {
+      "entity": "IfcCurtainWall",
+      "description": "A non-load-bearing exterior wall that encloses a building.",
+      "description_method": "source_based_paraphrase",
+      "main_view": "View_CurtainWall",
+      "custom_view": "View_CurtainWallCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcCurtainWall"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgelements/lexical/ifccurtainwall.htm"
+    },
+    "View_DiscreteAccessory": {
+      "entity": "IfcDiscreteAccessory",
+      "description": "Representation of different kinds of accessories included in or added to elements.",
+      "description_method": "short_source_sentence",
+      "main_view": "View_DiscreteAccessory",
+      "custom_view": "View_DiscreteAccessoryCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcDiscreteAccessory"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedcomponentelements/lexical/ifcdiscreteaccessory.htm"
+    },
+    "View_DistributionChamberElement": {
+      "entity": "IfcDistributionChamberElement",
+      "description": "The IfcDistributionChamberElement defines a place at which distribution systems and their constituent elements may be inspected or through which they may travel.",
+      "description_method": "short_source_sentence",
+      "main_view": "View_DistributionChamberElement",
+      "custom_view": "View_DistributionChamberElementCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcDistributionChamberElement"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgserviceelements/lexical/ifcdistributionchamberelement.htm"
+    },
+    "View_DistributionControlElement": {
+      "entity": "IfcDistributionControlElement",
+      "description": "The distribution element IfcDistributionControlElement defines occurrence elements of a building automation control system that are used to impart control over elements of a distribution system.",
+      "description_method": "short_source_sentence",
+      "main_view": "View_DistributionControlElement",
+      "custom_view": "View_DistributionControlElementCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcDistributionControlElement"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgserviceelements/lexical/ifcdistributioncontrolelement.htm"
+    },
+    "View_DistributionElement": {
+      "entity": "IfcDistributionElement",
+      "description": "Generalization of all elements that participate in a distribution system.",
+      "description_method": "short_source_sentence",
+      "main_view": "View_DistributionElement",
+      "custom_view": "View_DistributionElementCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcDistributionElement"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcproductextension/lexical/ifcdistributionelement.htm"
+    },
+    "View_DistributionFlowElement": {
+      "entity": "IfcDistributionFlowElement",
+      "description": "The distribution element IfcDistributionFlowElement defines occurrence elements of a distribution system that facilitate the distribution of energy or matter, such as air, water or power.",
+      "description_method": "short_source_sentence",
+      "main_view": "View_DistributionFlowElement",
+      "custom_view": "View_DistributionFlowElementCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcDistributionFlowElement"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgserviceelements/lexical/ifcdistributionflowelement.htm"
+    },
+    "View_DistributionPort": {
+      "entity": "IfcDistributionPort",
+      "description": "The product IfcDistributionPort defines the occurrence of a specialized port for use within the context of distribution elements.",
+      "description_method": "short_source_sentence",
+      "main_view": "View_DistributionPort",
+      "custom_view": "View_DistributionPortCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcDistributionPort"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgserviceelements/lexical/ifcdistributionport.htm"
+    },
+    "View_Door": {
+      "entity": "IfcDoor",
+      "description": "Construction for closing an opening, intended primarily for access with hinged, pivoted or sliding operation.",
+      "description_method": "short_source_sentence",
+      "main_view": "View_Door",
+      "custom_view": "View_DoorCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcDoor"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgelements/lexical/ifcdoor.htm"
+    },
+    "View_ElectricDistributionPoint": {
+      "entity": "IfcElectricDistributionPoint",
+      "description": "An IfcElectricDistributionPoint is a flow controller in which instances of electrical devices are brought together at a single place for a particular purpose.",
+      "description_method": "short_source_sentence",
+      "main_view": "View_ElectricDistributionPoint",
+      "custom_view": "View_ElectricDistributionPointCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcElectricDistributionPoint"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcelectricaldomain/lexical/ifcelectricdistributionpoint.htm"
+    },
+    "View_ElectricalCircuit": {
+      "entity": "IfcElectricalCircuit",
+      "description": "An IfcElectricalCircuit defines a particular type of system that is for the purpose of distributing electrical power.",
+      "description_method": "short_source_sentence",
+      "main_view": "View_ElectricalCircuit",
+      "custom_view": "View_ElectricalCircuitCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcElectricalCircuit"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcelectricaldomain/lexical/ifcelectricalcircuit.htm"
+    },
+    "View_ElectricalElement": {
+      "entity": "IfcElectricalElement",
+      "description": "Generalization of all electrical related objects.",
+      "description_method": "short_source_sentence",
+      "main_view": "View_ElectricalElement",
+      "custom_view": "View_ElectricalElementCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcElectricalElement"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcproductextension/lexical/ifcelectricalelement.htm"
+    },
+    "View_ElementAssembly": {
+      "entity": "IfcElementAssembly",
+      "description": "A container class that represents complex element assemblies aggregated from several elements, such as discrete elements, building elements, or other elements.",
+      "description_method": "short_source_sentence",
+      "main_view": "View_ElementAssembly",
+      "custom_view": "View_ElementAssemblyCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcElementAssembly"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcproductextension/lexical/ifcelementassembly.htm"
+    },
+    "View_EnergyConversionDevice": {
+      "entity": "IfcEnergyConversionDevice",
+      "description": "A device within a distribution system that converts energy or transfers heat.",
+      "description_method": "source_based_paraphrase",
+      "main_view": "View_EnergyConversionDevice",
+      "custom_view": "View_EnergyConversionDeviceCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcEnergyConversionDevice"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgserviceelements/lexical/ifcenergyconversiondevice.htm"
+    },
+    "View_EquipmentElement": {
+      "entity": "IfcEquipmentElement",
+      "description": "A premanufactured movable item of equipment that provides a building service or another servicing function.",
+      "description_method": "source_based_paraphrase",
+      "main_view": "View_EquipmentElement",
+      "custom_view": "View_EquipmentElementCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcEquipmentElement"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcproductextension/lexical/ifcequipmentelement.htm"
+    },
+    "View_EquipmentStandard": {
+      "entity": "IfcEquipmentStandard",
+      "description": "An IfcEquipmentStandard is a standard for equipment allocation that can be assigned to persons within an organization.",
+      "description_method": "short_source_sentence",
+      "main_view": "View_EquipmentStandard",
+      "custom_view": "View_EquipmentStandardCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcEquipmentStandard"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcfacilitiesmgmtdomain/lexical/ifcequipmentstandard.htm"
+    },
+    "View_Fastener": {
+      "entity": "IfcFastener",
+      "description": "Representations of fixing parts which are used as fasteners to connect or join elements with other elements.",
+      "description_method": "short_source_sentence",
+      "main_view": "View_Fastener",
+      "custom_view": "View_FastenerCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcFastener"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedcomponentelements/lexical/ifcfastener.htm"
+    },
+    "View_FlowController": {
+      "entity": "IfcFlowController",
+      "description": "An element that regulates flow through a distribution system, such as a damper, valve, switch, or relay.",
+      "description_method": "source_based_paraphrase",
+      "main_view": "View_FlowController",
+      "custom_view": "View_FlowControllerCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcFlowController"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgserviceelements/lexical/ifcflowcontroller.htm"
+    },
+    "View_FlowFitting": {
+      "entity": "IfcFlowFitting",
+      "description": "The distribution flow element IfcFlowFitting defines the occurrence of a junction or transition in a flow distribution system (e.g., elbow, tee, etc.).",
+      "description_method": "short_source_sentence",
+      "main_view": "View_FlowFitting",
+      "custom_view": "View_FlowFittingCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcFlowFitting"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgserviceelements/lexical/ifcflowfitting.htm"
+    },
+    "View_FlowMovingDevice": {
+      "entity": "IfcFlowMovingDevice",
+      "description": "A device that moves or circulates a liquid or gas through a distribution system, such as a pump or fan.",
+      "description_method": "source_based_paraphrase",
+      "main_view": "View_FlowMovingDevice",
+      "custom_view": "View_FlowMovingDeviceCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcFlowMovingDevice"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgserviceelements/lexical/ifcflowmovingdevice.htm"
+    },
+    "View_FlowSegment": {
+      "entity": "IfcFlowSegment",
+      "description": "A typically straight, continuous, two-port section of a distribution system, such as a pipe or duct section.",
+      "description_method": "source_based_paraphrase",
+      "main_view": "View_FlowSegment",
+      "custom_view": "View_FlowSegmentCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcFlowSegment"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgserviceelements/lexical/ifcflowsegment.htm"
+    },
+    "View_FlowStorageDevice": {
+      "entity": "IfcFlowStorageDevice",
+      "description": "A device used for temporary storage within a distribution system, such as a tank.",
+      "description_method": "source_based_paraphrase",
+      "main_view": "View_FlowStorageDevice",
+      "custom_view": "View_FlowStorageDeviceCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcFlowStorageDevice"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgserviceelements/lexical/ifcflowstoragedevice.htm"
+    },
+    "View_FlowTerminal": {
+      "entity": "IfcFlowTerminal",
+      "description": "A permanently attached endpoint or starting point of a distribution system, such as an air outlet, drain, or sink.",
+      "description_method": "source_based_paraphrase",
+      "main_view": "View_FlowTerminal",
+      "custom_view": "View_FlowTerminalCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcFlowTerminal"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgserviceelements/lexical/ifcflowterminal.htm"
+    },
+    "View_FlowTreatmentDevice": {
+      "entity": "IfcFlowTreatmentDevice",
+      "description": "A distribution-system device that removes unwanted material from a liquid or gas.",
+      "description_method": "source_based_paraphrase",
+      "main_view": "View_FlowTreatmentDevice",
+      "custom_view": "View_FlowTreatmentDeviceCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcFlowTreatmentDevice"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgserviceelements/lexical/ifcflowtreatmentdevice.htm"
+    },
+    "View_Footing": {
+      "entity": "IfcFooting",
+      "description": "A part of the foundation of a structure that spreads and transmits the load directly to the soil.",
+      "description_method": "short_source_sentence",
+      "main_view": "View_Footing",
+      "custom_view": "View_FootingCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcFooting"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcstructuralelementsdomain/lexical/ifcfooting.htm"
+    },
+    "View_FurnishingElement": {
+      "entity": "IfcFurnishingElement",
+      "description": "Generalization of all furniture related objects.",
+      "description_method": "short_source_sentence",
+      "main_view": "View_FurnishingElement",
+      "custom_view": "View_FurnishingElementCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcFurnishingElement"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcproductextension/lexical/ifcfurnishingelement.htm"
+    },
+    "View_FurnitureStandard": {
+      "entity": "IfcFurnitureStandard",
+      "description": "An IfcFurnitureStandard is a standard for furniture allocation that can be assigned to persons within an organization.",
+      "description_method": "short_source_sentence",
+      "main_view": "View_FurnitureStandard",
+      "custom_view": "View_FurnitureStandardCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcFurnitureStandard"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcfacilitiesmgmtdomain/lexical/ifcfurniturestandard.htm"
+    },
+    "View_Grid": {
+      "entity": "IfcGrid",
+      "description": "A planar design grid positioned in three-dimensional space to locate structural and other design elements.",
+      "description_method": "source_based_paraphrase",
+      "main_view": "View_Grid",
+      "custom_view": "View_GridCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcGrid"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcproductextension/lexical/ifcgrid.htm"
+    },
+    "View_Group": {
+      "entity": "IfcGroup",
+      "description": "An arbitrary grouping of objects for a shared purpose or organizational context.",
+      "description_method": "source_based_paraphrase",
+      "main_view": "View_Group",
+      "custom_view": "View_GroupCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcGroup"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifckernel/lexical/ifcgroup.htm"
+    },
+    "View_Inventory": {
+      "entity": "IfcInventory",
+      "description": "An IfcInventory is a list of items within an enterprise.",
+      "description_method": "short_source_sentence",
+      "main_view": "View_Inventory",
+      "custom_view": "View_InventoryCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcInventory"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedfacilitieselements/lexical/ifcinventory.htm"
+    },
+    "View_LaborResource": {
+      "entity": "IfcLaborResource",
+      "description": "An IfcLaborResource is used in construction with particular skills or crafts required to perform certain types of construction or management related work.",
+      "description_method": "short_source_sentence",
+      "main_view": "View_LaborResource",
+      "custom_view": "View_LaborResourceCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcLaborResource"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcconstructionmgmtdomain/lexical/ifclaborresource.htm"
+    },
+    "View_MechanicalFastener": {
+      "entity": "IfcMechanicalFastener",
+      "description": "A component that mechanically joins building elements or their parts.",
+      "description_method": "source_based_paraphrase",
+      "main_view": "View_MechanicalFastener",
+      "custom_view": "View_MechanicalFastenerCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcMechanicalFastener"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedcomponentelements/lexical/ifcmechanicalfastener.htm"
+    },
+    "View_Member": {
+      "entity": "IfcMember",
+      "description": "An IfcMember is a structural member designed to carry loads between or beyond points of support.",
+      "description_method": "short_source_sentence",
+      "main_view": "View_Member",
+      "custom_view": "View_MemberCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcMember"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgelements/lexical/ifcmember.htm"
+    },
+    "View_Move": {
+      "entity": "IfcMove",
+      "description": "An activity relocating people, organizational groups, or organizations together with their furniture and equipment.",
+      "description_method": "source_based_paraphrase",
+      "main_view": "View_Move",
+      "custom_view": "View_MoveCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcMove"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcfacilitiesmgmtdomain/lexical/ifcmove.htm"
+    },
+    "View_Occupant": {
+      "entity": "IfcOccupant",
+      "description": "An actor identifying the form of occupancy of a property.",
+      "description_method": "source_based_paraphrase",
+      "main_view": "View_Occupant",
+      "custom_view": "View_OccupantCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcOccupant"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedfacilitieselements/lexical/ifcoccupant.htm"
+    },
+    "View_OpeningElement": {
+      "entity": "IfcOpeningElement",
+      "description": "The opening element stands for opening, recess or chase, all reflecting voids.",
+      "description_method": "short_source_sentence",
+      "main_view": "View_OpeningElement",
+      "custom_view": "View_OpeningElementCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcOpeningElement"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcproductextension/lexical/ifcopeningelement.htm"
+    },
+    "View_OrderAction": {
+      "entity": "IfcOrderAction",
+      "description": "An IfcOrderAction is the point at which requests for work are received and processed within an organization.",
+      "description_method": "short_source_sentence",
+      "main_view": "View_OrderAction",
+      "custom_view": "View_OrderActionCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcOrderAction"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcfacilitiesmgmtdomain/lexical/ifcorderaction.htm"
+    },
+    "View_PerformanceHistory": {
+      "entity": "IfcPerformanceHistory",
+      "description": "The IfcPerformanceHistory is used to document the actual performance of an occurrence instance over time.",
+      "description_method": "short_source_sentence",
+      "main_view": "View_PerformanceHistory",
+      "custom_view": "View_PerformanceHistoryCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcPerformanceHistory"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifccontrolextension/lexical/ifcperformancehistory.htm"
+    },
+    "View_Permit": {
+      "entity": "IfcPermit",
+      "description": "An IfcPermit is a document that allows permission to carry out actions in places and on artifacts where security or other access restrictions apply.",
+      "description_method": "short_source_sentence",
+      "main_view": "View_Permit",
+      "custom_view": "View_PermitCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcPermit"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcfacilitiesmgmtdomain/lexical/ifcpermit.htm"
+    },
+    "View_Pile": {
+      "entity": "IfcPile",
+      "description": "A slender foundation member embedded into the ground to support a load.",
+      "description_method": "source_based_paraphrase",
+      "main_view": "View_Pile",
+      "custom_view": "View_PileCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcPile"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcstructuralelementsdomain/lexical/ifcpile.htm"
+    },
+    "View_Plate": {
+      "entity": "IfcPlate",
+      "description": "An IfcPlate is a planar and often flat part with constant thickness.",
+      "description_method": "short_source_sentence",
+      "main_view": "View_Plate",
+      "custom_view": "View_PlateCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcPlate"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgelements/lexical/ifcplate.htm"
+    },
+    "View_Procedure": {
+      "entity": "IfcProcedure",
+      "description": "An IfcProcedure is an identifiable step to be taken within a process that is considered to occur over zero or a non-measurable period of time.",
+      "description_method": "short_source_sentence",
+      "main_view": "View_Procedure",
+      "custom_view": "View_ProcedureCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcProcedure"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcprocessextension/lexical/ifcprocedure.htm"
+    },
+    "View_Project": {
+      "entity": "IfcProject",
+      "description": "The undertaking of some design, engineering, construction, or maintenance activities leading towards a product.",
+      "description_method": "short_source_sentence",
+      "main_view": "View_Project",
+      "custom_view": "View_ProjectCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcProject"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifckernel/lexical/ifcproject.htm"
+    },
+    "View_ProjectOrder": {
+      "entity": "IfcProjectOrder",
+      "description": "An IfcProjectOrder sets common properties for project orders issued in a construction or facilities management project.",
+      "description_method": "short_source_sentence",
+      "main_view": "View_ProjectOrder",
+      "custom_view": "View_ProjectOrderCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcProjectOrder"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedmgmtelements/lexical/ifcprojectorder.htm"
+    },
+    "View_ProjectOrderRecord": {
+      "entity": "IfcProjectOrderRecord",
+      "description": "An IfcProjectOrderRecord records information in sequence about the incidence of each order that is connected with one or a set of objects.",
+      "description_method": "short_source_sentence",
+      "main_view": "View_ProjectOrderRecord",
+      "custom_view": "View_ProjectOrderRecordCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcProjectOrderRecord"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedmgmtelements/lexical/ifcprojectorderrecord.htm"
+    },
+    "View_ProjectionElement": {
+      "entity": "IfcProjectionElement",
+      "description": "The IfcProjectionElement is a specialization of the general feature element to represent projections applied to building elements.",
+      "description_method": "short_source_sentence",
+      "main_view": "View_ProjectionElement",
+      "custom_view": "View_ProjectionElementCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcProjectionElement"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcproductextension/lexical/ifcprojectionelement.htm"
+    },
+    "View_Proxy": {
+      "entity": "IfcProxy",
+      "description": "A generic container for an object described by associated properties, with optional geometric representation and spatial placement.",
+      "description_method": "source_based_paraphrase",
+      "main_view": "View_Proxy",
+      "custom_view": "View_ProxyCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcProxy"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifckernel/lexical/ifcproxy.htm"
+    },
+    "View_Railing": {
+      "entity": "IfcRailing",
+      "description": "A frame assembly beside circulation spaces or boundaries, used in place of or together with walls.",
+      "description_method": "source_based_paraphrase",
+      "main_view": "View_Railing",
+      "custom_view": "View_RailingCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcRailing"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgelements/lexical/ifcrailing.htm"
+    },
+    "View_Ramp": {
+      "entity": "IfcRamp",
+      "description": "An inclined passage linking levels at different elevations.",
+      "description_method": "source_based_paraphrase",
+      "main_view": "View_Ramp",
+      "custom_view": "View_RampCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcRamp"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgelements/lexical/ifcramp.htm"
+    },
+    "View_RampFlight": {
+      "entity": "IfcRampFlight",
+      "description": "A single inclined ramp segment connecting landings, floors, or slabs at different elevations.",
+      "description_method": "source_based_paraphrase",
+      "main_view": "View_RampFlight",
+      "custom_view": "View_RampFlightCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcRampFlight"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgelements/lexical/ifcrampflight.htm"
+    },
+    "View_ReinforcingBar": {
+      "entity": "IfcReinforcingBar",
+      "description": "A steel bar, usually with manufactured deformations in the surface, used in concrete and masonry construction to provide additional strength.",
+      "description_method": "short_source_sentence",
+      "main_view": "View_ReinforcingBar",
+      "custom_view": "View_ReinforcingBarCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcReinforcingBar"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcstructuralelementsdomain/lexical/ifcreinforcingbar.htm"
+    },
+    "View_ReinforcingMesh": {
+      "entity": "IfcReinforcingMesh",
+      "description": "A welded grid of longitudinal and transverse wires or bars, commonly used to reinforce concrete slabs.",
+      "description_method": "source_based_paraphrase",
+      "main_view": "View_ReinforcingMesh",
+      "custom_view": "View_ReinforcingMeshCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcReinforcingMesh"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcstructuralelementsdomain/lexical/ifcreinforcingmesh.htm"
+    },
+    "View_Roof": {
+      "entity": "IfcRoof",
+      "description": "The top covering of a building, protecting it from weather.",
+      "description_method": "source_based_paraphrase",
+      "main_view": "View_Roof",
+      "custom_view": "View_RoofCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcRoof"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgelements/lexical/ifcroof.htm"
+    },
+    "View_RoundedEdgeFeature": {
+      "entity": "IfcRoundedEdgeFeature",
+      "description": "An edge feature with a rounded cross section shape.",
+      "description_method": "short_source_sentence",
+      "main_view": "View_RoundedEdgeFeature",
+      "custom_view": "View_RoundedEdgeFeatureCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcRoundedEdgeFeature"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedcomponentelements/lexical/ifcroundededgefeature.htm"
+    },
+    "View_ScheduleTimeControl": {
+      "entity": "IfcScheduleTimeControl",
+      "description": "Time-related process information, including actual or scheduled start and finish times, duration, and float.",
+      "description_method": "source_based_paraphrase",
+      "main_view": "View_ScheduleTimeControl",
+      "custom_view": "View_ScheduleTimeControlCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcScheduleTimeControl"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcprocessextension/lexical/ifcscheduletimecontrol.htm"
+    },
+    "View_ServiceLife": {
+      "entity": "IfcServiceLife",
+      "description": "An IfcServiceLife is the period of time that an artefact (typically a product or asset) will last.",
+      "description_method": "short_source_sentence",
+      "main_view": "View_ServiceLife",
+      "custom_view": "View_ServiceLifeCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcServiceLife"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedfacilitieselements/lexical/ifcservicelife.htm"
+    },
+    "View_Site": {
+      "entity": "IfcSite",
+      "description": "Area where construction works are undertaken.",
+      "description_method": "short_source_sentence",
+      "main_view": "View_Site",
+      "custom_view": "View_SiteCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcSite"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcproductextension/lexical/ifcsite.htm"
+    },
+    "View_Slab": {
+      "entity": "IfcSlab",
+      "description": "A slab is a component of the construction that normally encloses a space vertically.",
+      "description_method": "short_source_sentence",
+      "main_view": "View_Slab",
+      "custom_view": "View_SlabCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcSlab"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgelements/lexical/ifcslab.htm"
+    },
+    "View_Space": {
+      "entity": "IfcSpace",
+      "description": "A space represents an area or volume bounded actually or theoretically.",
+      "description_method": "short_source_sentence",
+      "main_view": "View_Space",
+      "custom_view": "View_SpaceCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcSpace"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcproductextension/lexical/ifcspace.htm"
+    },
+    "View_SpaceProgram": {
+      "entity": "IfcSpaceProgram",
+      "description": "Architectural program for a space in the building or facility being designed; essentially the requirements definition for such a building space.",
+      "description_method": "short_source_sentence",
+      "main_view": "View_SpaceProgram",
+      "custom_view": "View_SpaceProgramCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcSpaceProgram"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcarchitecturedomain/lexical/ifcspaceprogram.htm"
+    },
+    "View_Stair": {
+      "entity": "IfcStair",
+      "description": "Construction comprising a succession of horizontal stages (steps or landings) that make it possible to pass on foot to other levels.",
+      "description_method": "short_source_sentence",
+      "main_view": "View_Stair",
+      "custom_view": "View_StairCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcStair"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgelements/lexical/ifcstair.htm"
+    },
+    "View_StairFlight": {
+      "entity": "IfcStairFlight",
+      "description": "Assembly of building components in a single \"run\" of stair steps (not interrupted by a landing).",
+      "description_method": "short_source_sentence",
+      "main_view": "View_StairFlight",
+      "custom_view": "View_StairFlightCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcStairFlight"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgelements/lexical/ifcstairflight.htm"
+    },
+    "View_StructuralAnalysisModel": {
+      "entity": "IfcStructuralAnalysisModel",
+      "description": "The IfcStructuralAnalysisModel is used to assemble all information needed to represent a structural analysis model.",
+      "description_method": "short_source_sentence",
+      "main_view": "View_StructuralAnalysisModel",
+      "custom_view": "View_StructuralAnalysisModelCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcStructuralAnalysisModel"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcstructuralanalysisdomain/lexical/ifcstructuralanalysismodel.htm"
+    },
+    "View_StructuralCurveConnection": {
+      "entity": "IfcStructuralCurveConnection",
+      "description": "A linear structural-analysis connection or support where surface members meet along an edge.",
+      "description_method": "source_based_paraphrase",
+      "main_view": "View_StructuralCurveConnection",
+      "custom_view": "View_StructuralCurveConnectionCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcStructuralCurveConnection"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcstructuralanalysisdomain/lexical/ifcstructuralcurveconnection.htm"
+    },
+    "View_StructuralCurveMember": {
+      "entity": "IfcStructuralCurveMember",
+      "description": "A linear structural-analysis idealization of a member such as a beam, column, or rod.",
+      "description_method": "source_based_paraphrase",
+      "main_view": "View_StructuralCurveMember",
+      "custom_view": "View_StructuralCurveMemberCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcStructuralCurveMember",
+        "IfcStructuralCurveMemberVarying"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcstructuralanalysisdomain/lexical/ifcstructuralcurvemember.htm"
+    },
+    "View_StructuralLinearAction": {
+      "entity": "IfcStructuralLinearAction",
+      "description": "Instances of the entity IfcStructuralLinearAction are used to define constant linear actions.",
+      "description_method": "short_source_sentence",
+      "main_view": "View_StructuralLinearAction",
+      "custom_view": "View_StructuralLinearActionCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcStructuralLinearAction",
+        "IfcStructuralLinearActionVarying"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcstructuralanalysisdomain/lexical/ifcstructurallinearaction.htm"
+    },
+    "View_StructuralLoadGroup": {
+      "entity": "IfcStructuralLoadGroup",
+      "description": "The entity IfcStructuralLoadGroup is used to structure the physical impacts.",
+      "description_method": "short_source_sentence",
+      "main_view": "View_StructuralLoadGroup",
+      "custom_view": "View_StructuralLoadGroupCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcStructuralLoadGroup"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcstructuralanalysisdomain/lexical/ifcstructuralloadgroup.htm"
+    },
+    "View_StructuralPlanarAction": {
+      "entity": "IfcStructuralPlanarAction",
+      "description": "Instances of the entity IfcStructuralPlanarAction are used to define constant planar actions.",
+      "description_method": "short_source_sentence",
+      "main_view": "View_StructuralPlanarAction",
+      "custom_view": "View_StructuralPlanarActionCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcStructuralPlanarAction",
+        "IfcStructuralPlanarActionVarying"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcstructuralanalysisdomain/lexical/ifcstructuralplanaraction.htm"
+    },
+    "View_StructuralPointAction": {
+      "entity": "IfcStructuralPointAction",
+      "description": "Instances of the entity IfcStructuralPointAction are used to define point actions.",
+      "description_method": "short_source_sentence",
+      "main_view": "View_StructuralPointAction",
+      "custom_view": "View_StructuralPointActionCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcStructuralPointAction"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcstructuralanalysisdomain/lexical/ifcstructuralpointaction.htm"
+    },
+    "View_StructuralPointConnection": {
+      "entity": "IfcStructuralPointConnection",
+      "description": "Instances of the entity IfcStructuralPointConnection shall be used to describe structural nodes or point supports.",
+      "description_method": "short_source_sentence",
+      "main_view": "View_StructuralPointConnection",
+      "custom_view": "View_StructuralPointConnectionCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcStructuralPointConnection"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcstructuralanalysisdomain/lexical/ifcstructuralpointconnection.htm"
+    },
+    "View_StructuralPointReaction": {
+      "entity": "IfcStructuralPointReaction",
+      "description": "Instances of the entity IfcStructuralPointReaction are used to define point reactions.",
+      "description_method": "short_source_sentence",
+      "main_view": "View_StructuralPointReaction",
+      "custom_view": "View_StructuralPointReactionCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcStructuralPointReaction"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcstructuralanalysisdomain/lexical/ifcstructuralpointreaction.htm"
+    },
+    "View_StructuralResultGroup": {
+      "entity": "IfcStructuralResultGroup",
+      "description": "Instances of the entity IfcStructuralResultGroup are used to group results of structural analysis calculations and to capture the connection to the underlying basic load group.",
+      "description_method": "short_source_sentence",
+      "main_view": "View_StructuralResultGroup",
+      "custom_view": "View_StructuralResultGroupCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcStructuralResultGroup"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcstructuralanalysisdomain/lexical/ifcstructuralresultgroup.htm"
+    },
+    "View_StructuralSurfaceConnection": {
+      "entity": "IfcStructuralSurfaceConnection",
+      "description": "A surface structural-analysis connection or support where members meet over a face.",
+      "description_method": "source_based_paraphrase",
+      "main_view": "View_StructuralSurfaceConnection",
+      "custom_view": "View_StructuralSurfaceConnectionCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcStructuralSurfaceConnection"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcstructuralanalysisdomain/lexical/ifcstructuralsurfaceconnection.htm"
+    },
+    "View_StructuralSurfaceMember": {
+      "entity": "IfcStructuralSurfaceMember",
+      "description": "A surface structural-analysis idealization of a member such as a slab, wall, or shell.",
+      "description_method": "source_based_paraphrase",
+      "main_view": "View_StructuralSurfaceMember",
+      "custom_view": "View_StructuralSurfaceMemberCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcStructuralSurfaceMember",
+        "IfcStructuralSurfaceMemberVarying"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcstructuralanalysisdomain/lexical/ifcstructuralsurfacemember.htm"
+    },
+    "View_SubContractResource": {
+      "entity": "IfcSubContractResource",
+      "description": "An IfcSubContractResource is a construction resource needed in a construction process that represents a type of sub-contractor.",
+      "description_method": "short_source_sentence",
+      "main_view": "View_SubContractResource",
+      "custom_view": "View_SubContractResourceCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcSubContractResource"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcconstructionmgmtdomain/lexical/ifcsubcontractresource.htm"
+    },
+    "View_System": {
+      "entity": "IfcSystem",
+      "description": "A collection of related parts organized to perform a common function or provide a service.",
+      "description_method": "source_based_paraphrase",
+      "main_view": "View_System",
+      "custom_view": "View_SystemCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcSystem"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcproductextension/lexical/ifcsystem.htm"
+    },
+    "View_Task": {
+      "entity": "IfcTask",
+      "description": "An IfcTask is an identifiable unit of work to be carried out independently of any other units of work in a construction project.",
+      "description_method": "short_source_sentence",
+      "main_view": "View_Task",
+      "custom_view": "View_TaskCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcTask"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcprocessextension/lexical/ifctask.htm"
+    },
+    "View_Tendon": {
+      "entity": "IfcTendon",
+      "description": "A tensioned steel wire, cable, bar, rod, or strand used to prestress concrete.",
+      "description_method": "source_based_paraphrase",
+      "main_view": "View_Tendon",
+      "custom_view": "View_TendonCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcTendon"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcstructuralelementsdomain/lexical/ifctendon.htm"
+    },
+    "View_TendonAnchor": {
+      "entity": "IfcTendonAnchor",
+      "description": "In prestressed or posttensioned concrete, the end connection for the tendons.",
+      "description_method": "short_source_sentence",
+      "main_view": "View_TendonAnchor",
+      "custom_view": "View_TendonAnchorCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcTendonAnchor"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcstructuralelementsdomain/lexical/ifctendonanchor.htm"
+    },
+    "View_TimeSeriesSchedule": {
+      "entity": "IfcTimeSeriesSchedule",
+      "description": "The IfcTimeSeriesSchedule defines a time-series that is applicable to to one or more calendar dates.",
+      "description_method": "short_source_sentence",
+      "main_view": "View_TimeSeriesSchedule",
+      "custom_view": "View_TimeSeriesScheduleCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcTimeSeriesSchedule"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifccontrolextension/lexical/ifctimeseriesschedule.htm"
+    },
+    "View_TransportElement": {
+      "entity": "IfcTransportElement",
+      "description": "Generalization of all transport related objects that move people, animals or goods within a building or building complex.",
+      "description_method": "short_source_sentence",
+      "main_view": "View_TransportElement",
+      "custom_view": "View_TransportElementCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcTransportElement"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcproductextension/lexical/ifctransportelement.htm"
+    },
+    "View_VirtualElement": {
+      "entity": "IfcVirtualElement",
+      "description": "A special element used to provide imaginary boundaries, such as between two adjacent, but not separated, spaces.",
+      "description_method": "short_source_sentence",
+      "main_view": "View_VirtualElement",
+      "custom_view": "View_VirtualElementCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcVirtualElement"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcproductextension/lexical/ifcvirtualelement.htm"
+    },
+    "View_Wall": {
+      "entity": "IfcWall",
+      "description": "Vertical construction usually in masonry or in concrete which bounds or subdivides a construction works and fulfills a load bearing or retaining function.",
+      "description_method": "short_source_sentence",
+      "main_view": "View_Wall",
+      "custom_view": "View_WallCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcWall",
+        "IfcWallStandardCase"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgelements/lexical/ifcwall.htm"
+    },
+    "View_Window": {
+      "entity": "IfcWindow",
+      "description": "Construction for closing a vertical or near vertical opening in a wall or pitched roof that will admit light and may admit fresh air.",
+      "description_method": "short_source_sentence",
+      "main_view": "View_Window",
+      "custom_view": "View_WindowCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcWindow"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgelements/lexical/ifcwindow.htm"
+    },
+    "View_WorkPlan": {
+      "entity": "IfcWorkPlan",
+      "description": "An IfcWorkPlan represents work plans in a construction or a facilities management project.",
+      "description_method": "short_source_sentence",
+      "main_view": "View_WorkPlan",
+      "custom_view": "View_WorkPlanCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcWorkPlan"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcprocessextension/lexical/ifcworkplan.htm"
+    },
+    "View_WorkSchedule": {
+      "entity": "IfcWorkSchedule",
+      "description": "An IfcWorkSchedule represents a task schedule in a work plan, which in turn can contain a set of schedules for different purposes.",
+      "description_method": "short_source_sentence",
+      "main_view": "View_WorkSchedule",
+      "custom_view": "View_WorkScheduleCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcWorkSchedule"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcprocessextension/lexical/ifcworkschedule.htm"
+    },
+    "View_Zone": {
+      "entity": "IfcZone",
+      "description": "A zone (IfcZone) is an aggregation of spaces, partial spaces or other zones.",
+      "description_method": "short_source_sentence",
+      "main_view": "View_Zone",
+      "custom_view": "View_ZoneCustomPset",
+      "custom_view_is_conditional": true,
+      "included_ifc_classes": [
+        "IfcZone"
+      ],
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcproductextension/lexical/ifczone.htm"
+    }
+  },
+  "class_definitions": {
+    "IfcActionRequest": {
+      "description": "An IfcActionRequest is a request for an action to fulfill a need.",
+      "description_method": "short_source_sentence",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcControl",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_ActionRequest",
+      "explicit_class_view": "View_ActionRequest",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcfacilitiesmgmtdomain/lexical/ifcactionrequest.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcfacilitiesmgmtdomain/lexical/ifcactionrequest.htm",
+      "cached_definition_sha256": "a501bde1e65a52a750356e642ff9dd2b73e82fbfb599102e479d0a9a07a278ac"
+    },
+    "IfcActor": {
+      "description": "The IfcActor defines all actors or human agents involved in a project during its full life cycle.",
+      "description_method": "short_source_sentence",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_Actor",
+      "explicit_class_view": "View_Actor",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifckernel/lexical/ifcactor.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifckernel/lexical/ifcactor.htm",
+      "cached_definition_sha256": "2b03826b962b1804cdc6a230f533efa04afab3a158c57e45fa6c5fe35c782a7a"
+    },
+    "IfcAnnotation": {
+      "description": "A graphical annotation that adds notes or meaning to objects within the project's geometric and spatial context.",
+      "description_method": "source_based_paraphrase",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_Annotation",
+      "explicit_class_view": "View_Annotation",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcproductextension/lexical/ifcannotation.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcproductextension/lexical/ifcannotation.htm",
+      "cached_definition_sha256": "454b8e191f80c6af7a5969138e233f372f39ec9575e03768f028d77c425d9d75"
+    },
+    "IfcAsset": {
+      "description": "An identifiable group of elements treated as one asset with financial value.",
+      "description_method": "source_based_paraphrase",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcGroup",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_Asset",
+      "explicit_class_view": "View_Asset",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedfacilitieselements/lexical/ifcasset.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedfacilitieselements/lexical/ifcasset.htm",
+      "cached_definition_sha256": "4a4b245f4364433aa008efa548d9e9bf774afc7a516879777af4316a276d9ed4"
+    },
+    "IfcBeam": {
+      "description": "An individual beam, usually horizontal or nearly horizontal. It is not necessarily load bearing.",
+      "description_method": "source_based_paraphrase",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcBuildingElement",
+        "IfcElement",
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_Beam",
+      "explicit_class_view": "View_Beam",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgelements/lexical/ifcbeam.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgelements/lexical/ifcbeam.htm",
+      "cached_definition_sha256": "76c423ad58fc14029d8a19aed040491c545e4f38128e1cf53c36fd39e3d63d32"
+    },
+    "IfcBuilding": {
+      "description": "A structure intended to shelter occupants or contents and normally remain permanently in one place.",
+      "description_method": "source_based_paraphrase",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcSpatialStructureElement",
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_Building",
+      "explicit_class_view": "View_Building",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcproductextension/lexical/ifcbuilding.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcproductextension/lexical/ifcbuilding.htm",
+      "cached_definition_sha256": "6a4a81d94edfa128186424627594fa31dfa0d4a65d5f52f49b88c31dedc7e897"
+    },
+    "IfcBuildingElement": {
+      "description": "Major functional part of a building, examples are foundation, floor, roof, wall.",
+      "description_method": "short_source_sentence",
+      "is_abstract": true,
+      "supertypes": [
+        "IfcElement",
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": null,
+      "explicit_class_view": "View_BuildingElement",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcproductextension/lexical/ifcbuildingelement.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcproductextension/lexical/ifcbuildingelement.htm",
+      "cached_definition_sha256": "84a10a032599f66344fbfaad5a6feee0b0ac82ef72c87a35aacf5d8fb01d8ae8"
+    },
+    "IfcBuildingElementComponent": {
+      "description": "A building element component represents items included in building elements, which usually are not of interest from the overall building structure viewpoint.",
+      "description_method": "short_source_sentence",
+      "is_abstract": true,
+      "supertypes": [
+        "IfcBuildingElement",
+        "IfcElement",
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": null,
+      "explicit_class_view": "View_BuildingElementComponent",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcstructuralelementsdomain/lexical/ifcbuildingelementcomponent.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcstructuralelementsdomain/lexical/ifcbuildingelementcomponent.htm",
+      "cached_definition_sha256": "d61930e303ec068ea3c55e633ece4acbff452c323749742da083f315f44dac4d"
+    },
+    "IfcBuildingElementPart": {
+      "description": "Layers or major components as subordinate parts of a building element.",
+      "description_method": "short_source_sentence",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcBuildingElementComponent",
+        "IfcBuildingElement",
+        "IfcElement",
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_BuildingElementPart",
+      "explicit_class_view": "View_BuildingElementPart",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcstructuralelementsdomain/lexical/ifcbuildingelementpart.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcstructuralelementsdomain/lexical/ifcbuildingelementpart.htm",
+      "cached_definition_sha256": "5871db7bc8893042c27f0820b9db4184c7fcaed9051e853f07ae1619e27923a5"
+    },
+    "IfcBuildingElementProxy": {
+      "description": "An element represented without a more specific predefined semantic class for the element it represents.",
+      "description_method": "source_based_paraphrase",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcBuildingElement",
+        "IfcElement",
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_BuildingElementProxy",
+      "explicit_class_view": "View_BuildingElementProxy",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcproductextension/lexical/ifcbuildingelementproxy.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcproductextension/lexical/ifcbuildingelementproxy.htm",
+      "cached_definition_sha256": "5c5d86d4c1cf90440f0538ca86cabd65106aee6b0b783eb7c88801a15030d71f"
+    },
+    "IfcBuildingStorey": {
+      "description": "The building storey has an elevation and typically represents a (nearly) horizontal aggregation of spaces that are vertically bound.",
+      "description_method": "short_source_sentence",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcSpatialStructureElement",
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_BuildingStorey",
+      "explicit_class_view": "View_BuildingStorey",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcproductextension/lexical/ifcbuildingstorey.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcproductextension/lexical/ifcbuildingstorey.htm",
+      "cached_definition_sha256": "129c7733b3aa686db91cae52cad743c7cbf1e32b39d7bebb1db5d44ba3bb593d"
+    },
+    "IfcChamferEdgeFeature": {
+      "description": "An edge feature with a chamfered cross section shape.",
+      "description_method": "short_source_sentence",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcEdgeFeature",
+        "IfcFeatureElementSubtraction",
+        "IfcFeatureElement",
+        "IfcElement",
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_ChamferEdgeFeature",
+      "explicit_class_view": "View_ChamferEdgeFeature",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedcomponentelements/lexical/ifcchamferedgefeature.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedcomponentelements/lexical/ifcchamferedgefeature.htm",
+      "cached_definition_sha256": "a411b490b896358649bbb99c84e4873a69b922936c521179028d01f8d136255d"
+    },
+    "IfcColumn": {
+      "description": "A usually vertical structural member that transfers forces to its base, primarily through compression.",
+      "description_method": "source_based_paraphrase",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcBuildingElement",
+        "IfcElement",
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_Column",
+      "explicit_class_view": "View_Column",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgelements/lexical/ifccolumn.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgelements/lexical/ifccolumn.htm",
+      "cached_definition_sha256": "e26a3e15f357af866145cbcbb090b4acd9f677007548a0af750b6c45207095d8"
+    },
+    "IfcCondition": {
+      "description": "An IfcCondition determines the state or condition of an element at a particular point in time.",
+      "description_method": "short_source_sentence",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcGroup",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_Condition",
+      "explicit_class_view": "View_Condition",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcfacilitiesmgmtdomain/lexical/ifccondition.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcfacilitiesmgmtdomain/lexical/ifccondition.htm",
+      "cached_definition_sha256": "8a623ea7f51a2dc886fcba55a9efbf93537a1ad5d07022e64a1f0008d3890075"
+    },
+    "IfcConditionCriterion": {
+      "description": "An IfcConditionCriterion is a particular measured or assessed criterion that contributes to the overall condition of an artifact.",
+      "description_method": "short_source_sentence",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcControl",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_ConditionCriterion",
+      "explicit_class_view": "View_ConditionCriterion",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcfacilitiesmgmtdomain/lexical/ifcconditioncriterion.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcfacilitiesmgmtdomain/lexical/ifcconditioncriterion.htm",
+      "cached_definition_sha256": "ab8a72512496c7bca4bdee1660fbccc1a0a9435d822731656eec137249279df0"
+    },
+    "IfcConstructionEquipmentResource": {
+      "description": "An IfcConstructionEquipmentResource is a type of construction equipment that is used as resource to assist in the performance of construction.",
+      "description_method": "short_source_sentence",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcConstructionResource",
+        "IfcResource",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_ConstructionEquipmentResource",
+      "explicit_class_view": "View_ConstructionEquipmentResource",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcconstructionmgmtdomain/lexical/ifcconstructionequipmentresource.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcconstructionmgmtdomain/lexical/ifcconstructionequipmentresource.htm",
+      "cached_definition_sha256": "489a4e5150aca18f97f1c05df90929b7639d520a75f321dddee6c5daf65fe65a"
+    },
+    "IfcConstructionMaterialResource": {
+      "description": "An IfcConstructionMaterialResource identifies a material resource type in a construction project.",
+      "description_method": "short_source_sentence",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcConstructionResource",
+        "IfcResource",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_ConstructionMaterialResource",
+      "explicit_class_view": "View_ConstructionMaterialResource",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcconstructionmgmtdomain/lexical/ifcconstructionmaterialresource.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcconstructionmgmtdomain/lexical/ifcconstructionmaterialresource.htm",
+      "cached_definition_sha256": "950c65e8b8f62ea5cb452c4f3ef18d25e06c875c52aae8bc7f0e6f99bf9d80ca"
+    },
+    "IfcConstructionProductResource": {
+      "description": "An IfcConstructionProductResource defines the role of a product that is consumed (wholly or partially), or occupied (i.e. used) in the performance of construction.",
+      "description_method": "short_source_sentence",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcConstructionResource",
+        "IfcResource",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_ConstructionProductResource",
+      "explicit_class_view": "View_ConstructionProductResource",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcconstructionmgmtdomain/lexical/ifcconstructionproductresource.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcconstructionmgmtdomain/lexical/ifcconstructionproductresource.htm",
+      "cached_definition_sha256": "4f4b9db859087fcf09a5746a3db03f6b8dc099e68091f24ccb7231c78d12762a"
+    },
+    "IfcConstructionResource": {
+      "description": "A general construction resource, including labor, materials, equipment, products, subcontractors, or resource groups such as crews.",
+      "description_method": "source_based_paraphrase",
+      "is_abstract": true,
+      "supertypes": [
+        "IfcResource",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": null,
+      "explicit_class_view": "View_ConstructionResource",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcconstructionmgmtdomain/lexical/ifcconstructionresource.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcconstructionmgmtdomain/lexical/ifcconstructionresource.htm",
+      "cached_definition_sha256": "cecb1e645e6bd4d491ce26a8a00dea3bbdf9564d5eeba9058c0b1d101255dbd7"
+    },
+    "IfcControl": {
+      "description": "The IfcControl is the abstract generalization of all concepts that control or constrain products or processes in general.",
+      "description_method": "short_source_sentence",
+      "is_abstract": true,
+      "supertypes": [
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": null,
+      "explicit_class_view": "View_Control",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifckernel/lexical/ifccontrol.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifckernel/lexical/ifccontrol.htm",
+      "cached_definition_sha256": "7e36919735b2bfa4dec9192ae84faf66f42be837d123f056cf8b368f759dd7e6"
+    },
+    "IfcCostItem": {
+      "description": "A cost or financial value with contextual information, used as an item within a cost schedule.",
+      "description_method": "source_based_paraphrase",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcControl",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_CostItem",
+      "explicit_class_view": "View_CostItem",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedmgmtelements/lexical/ifccostitem.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedmgmtelements/lexical/ifccostitem.htm",
+      "cached_definition_sha256": "e8d780628b1209fcdefecd798985ad1128c424e0ff890901e877bcb27b5ffb60"
+    },
+    "IfcCostSchedule": {
+      "description": "A collection of cost items for an estimate, bill of quantities, work order, or another cost-related presentation.",
+      "description_method": "source_based_paraphrase",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcControl",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_CostSchedule",
+      "explicit_class_view": "View_CostSchedule",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedmgmtelements/lexical/ifccostschedule.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedmgmtelements/lexical/ifccostschedule.htm",
+      "cached_definition_sha256": "e463c9d2813045debaa627a18c5f3649e16c070bac25296e9944cf38437ecb88"
+    },
+    "IfcCovering": {
+      "description": "A finishing or protective covering applied to a surface or element, such as flooring, ceiling, cladding, insulation, or roofing.",
+      "description_method": "source_based_paraphrase",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcBuildingElement",
+        "IfcElement",
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_Covering",
+      "explicit_class_view": "View_Covering",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcproductextension/lexical/ifccovering.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcproductextension/lexical/ifccovering.htm",
+      "cached_definition_sha256": "e5893a90e8ebace6d0d90774b0ac716d4fb53271d3ecb89193ef2506db967087"
+    },
+    "IfcCrewResource": {
+      "description": "An IfcCrewResource represents a type of resource used in construction processes, i.e. construction crew resource.",
+      "description_method": "short_source_sentence",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcConstructionResource",
+        "IfcResource",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_CrewResource",
+      "explicit_class_view": "View_CrewResource",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcconstructionmgmtdomain/lexical/ifccrewresource.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcconstructionmgmtdomain/lexical/ifccrewresource.htm",
+      "cached_definition_sha256": "697b0455b182c1c4286a07106be79e44a054f427eaf36d1733a82f0f39b3c716"
+    },
+    "IfcCurtainWall": {
+      "description": "A non-load-bearing exterior wall that encloses a building.",
+      "description_method": "source_based_paraphrase",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcBuildingElement",
+        "IfcElement",
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_CurtainWall",
+      "explicit_class_view": "View_CurtainWall",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgelements/lexical/ifccurtainwall.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgelements/lexical/ifccurtainwall.htm",
+      "cached_definition_sha256": "7d19f04a61e306ff0685c431955b19082d43469df1805eeea039c5520a48f06f"
+    },
+    "IfcDiscreteAccessory": {
+      "description": "Representation of different kinds of accessories included in or added to elements.",
+      "description_method": "short_source_sentence",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcElementComponent",
+        "IfcElement",
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_DiscreteAccessory",
+      "explicit_class_view": "View_DiscreteAccessory",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedcomponentelements/lexical/ifcdiscreteaccessory.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedcomponentelements/lexical/ifcdiscreteaccessory.htm",
+      "cached_definition_sha256": "672e837020b7c1b74d4c966b25b8d4b5cdcc43044ea7ad17a124f5e6f45066fd"
+    },
+    "IfcDistributionChamberElement": {
+      "description": "The IfcDistributionChamberElement defines a place at which distribution systems and their constituent elements may be inspected or through which they may travel.",
+      "description_method": "short_source_sentence",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcDistributionFlowElement",
+        "IfcDistributionElement",
+        "IfcElement",
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_DistributionChamberElement",
+      "explicit_class_view": "View_DistributionChamberElement",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgserviceelements/lexical/ifcdistributionchamberelement.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgserviceelements/lexical/ifcdistributionchamberelement.htm",
+      "cached_definition_sha256": "9756fb4873c69fb7ac2b957a434678e422a1453d8b53faaafc11a57c7195109c"
+    },
+    "IfcDistributionControlElement": {
+      "description": "The distribution element IfcDistributionControlElement defines occurrence elements of a building automation control system that are used to impart control over elements of a distribution system.",
+      "description_method": "short_source_sentence",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcDistributionElement",
+        "IfcElement",
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_DistributionControlElement",
+      "explicit_class_view": "View_DistributionControlElement",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgserviceelements/lexical/ifcdistributioncontrolelement.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgserviceelements/lexical/ifcdistributioncontrolelement.htm",
+      "cached_definition_sha256": "5716f7fb735410c81b706606642f9b6d775bf80f616fa36b91d61aec1db29bae"
+    },
+    "IfcDistributionElement": {
+      "description": "Generalization of all elements that participate in a distribution system.",
+      "description_method": "short_source_sentence",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcElement",
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_DistributionElement",
+      "explicit_class_view": "View_DistributionElement",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcproductextension/lexical/ifcdistributionelement.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcproductextension/lexical/ifcdistributionelement.htm",
+      "cached_definition_sha256": "53ea81e3b3d618db4495f7018c687923ed3f6427a09f7722eb99942c61a7b30c"
+    },
+    "IfcDistributionFlowElement": {
+      "description": "The distribution element IfcDistributionFlowElement defines occurrence elements of a distribution system that facilitate the distribution of energy or matter, such as air, water or power.",
+      "description_method": "short_source_sentence",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcDistributionElement",
+        "IfcElement",
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_DistributionFlowElement",
+      "explicit_class_view": "View_DistributionFlowElement",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgserviceelements/lexical/ifcdistributionflowelement.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgserviceelements/lexical/ifcdistributionflowelement.htm",
+      "cached_definition_sha256": "d5d4af038633ec778356df1d2a8b8263298b58187a58f66e97e101ad65926842"
+    },
+    "IfcDistributionPort": {
+      "description": "The product IfcDistributionPort defines the occurrence of a specialized port for use within the context of distribution elements.",
+      "description_method": "short_source_sentence",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcPort",
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_DistributionPort",
+      "explicit_class_view": "View_DistributionPort",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgserviceelements/lexical/ifcdistributionport.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgserviceelements/lexical/ifcdistributionport.htm",
+      "cached_definition_sha256": "3677b9c6b4afe76c66eab0903b0c5e2fa3848ec097207d07ac13df7be47007aa"
+    },
+    "IfcDoor": {
+      "description": "Construction for closing an opening, intended primarily for access with hinged, pivoted or sliding operation.",
+      "description_method": "short_source_sentence",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcBuildingElement",
+        "IfcElement",
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_Door",
+      "explicit_class_view": "View_Door",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgelements/lexical/ifcdoor.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgelements/lexical/ifcdoor.htm",
+      "cached_definition_sha256": "7b6432ae5c6340f82f5eb61a929f98a191deda82654fbc499a73574a114548a8"
+    },
+    "IfcEdgeFeature": {
+      "description": "A feature describing the edge shape of an building element.",
+      "description_method": "short_source_sentence",
+      "is_abstract": true,
+      "supertypes": [
+        "IfcFeatureElementSubtraction",
+        "IfcFeatureElement",
+        "IfcElement",
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": null,
+      "explicit_class_view": "View_EdgeFeature",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedcomponentelements/lexical/ifcedgefeature.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedcomponentelements/lexical/ifcedgefeature.htm",
+      "cached_definition_sha256": "e9c2c9c2efe7315ef822f37692bbde4309ea0bdd663a3710ff00bce5adc8bfa5"
+    },
+    "IfcElectricDistributionPoint": {
+      "description": "An IfcElectricDistributionPoint is a flow controller in which instances of electrical devices are brought together at a single place for a particular purpose.",
+      "description_method": "short_source_sentence",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcFlowController",
+        "IfcDistributionFlowElement",
+        "IfcDistributionElement",
+        "IfcElement",
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_ElectricDistributionPoint",
+      "explicit_class_view": "View_ElectricDistributionPoint",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcelectricaldomain/lexical/ifcelectricdistributionpoint.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcelectricaldomain/lexical/ifcelectricdistributionpoint.htm",
+      "cached_definition_sha256": "9973418f9535d797ce70c69ef636e1b726338bb8cf453c079cd9ee518086541b"
+    },
+    "IfcElectricalCircuit": {
+      "description": "An IfcElectricalCircuit defines a particular type of system that is for the purpose of distributing electrical power.",
+      "description_method": "short_source_sentence",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcSystem",
+        "IfcGroup",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_ElectricalCircuit",
+      "explicit_class_view": "View_ElectricalCircuit",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcelectricaldomain/lexical/ifcelectricalcircuit.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcelectricaldomain/lexical/ifcelectricalcircuit.htm",
+      "cached_definition_sha256": "57bc0f363e43d88fa6ad6c0bc361de0b414273f3e1dffcb22432aae149320110"
+    },
+    "IfcElectricalElement": {
+      "description": "Generalization of all electrical related objects.",
+      "description_method": "short_source_sentence",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcElement",
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_ElectricalElement",
+      "explicit_class_view": "View_ElectricalElement",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcproductextension/lexical/ifcelectricalelement.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcproductextension/lexical/ifcelectricalelement.htm",
+      "cached_definition_sha256": "4ec27d25a1a662676916c27553352b961553afe517160fc97bc907cdb9802d7b"
+    },
+    "IfcElement": {
+      "description": "Generalization of all components that make up an AEC product.",
+      "description_method": "short_source_sentence",
+      "is_abstract": true,
+      "supertypes": [
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": null,
+      "explicit_class_view": "View_Element",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcproductextension/lexical/ifcelement.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcproductextension/lexical/ifcelement.htm",
+      "cached_definition_sha256": "382bdad2362c9d3295f7b7e447a9632ab0e44f31b9ace6250162f785ab284495"
+    },
+    "IfcElementAssembly": {
+      "description": "A container class that represents complex element assemblies aggregated from several elements, such as discrete elements, building elements, or other elements.",
+      "description_method": "short_source_sentence",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcElement",
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_ElementAssembly",
+      "explicit_class_view": "View_ElementAssembly",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcproductextension/lexical/ifcelementassembly.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcproductextension/lexical/ifcelementassembly.htm",
+      "cached_definition_sha256": "382f82f92ac9c9ae47098890f92bc1ef1490110ef5e5e304716dc91968d9d7cc"
+    },
+    "IfcElementComponent": {
+      "description": "A minor component included in, added to, or connecting larger elements.",
+      "description_method": "source_based_paraphrase",
+      "is_abstract": true,
+      "supertypes": [
+        "IfcElement",
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": null,
+      "explicit_class_view": "View_ElementComponent",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedcomponentelements/lexical/ifcelementcomponent.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedcomponentelements/lexical/ifcelementcomponent.htm",
+      "cached_definition_sha256": "f55ab7b0fc2b74bdbff4ebd265cc94a03a4b2977799698e0e657fd6ca95176c2"
+    },
+    "IfcEnergyConversionDevice": {
+      "description": "A device within a distribution system that converts energy or transfers heat.",
+      "description_method": "source_based_paraphrase",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcDistributionFlowElement",
+        "IfcDistributionElement",
+        "IfcElement",
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_EnergyConversionDevice",
+      "explicit_class_view": "View_EnergyConversionDevice",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgserviceelements/lexical/ifcenergyconversiondevice.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgserviceelements/lexical/ifcenergyconversiondevice.htm",
+      "cached_definition_sha256": "204e6ded217b3d30484825bbbc7e8454d8522c14dddee0443dce3864cf6dfd97"
+    },
+    "IfcEquipmentElement": {
+      "description": "A premanufactured movable item of equipment that provides a building service or another servicing function.",
+      "description_method": "source_based_paraphrase",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcElement",
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_EquipmentElement",
+      "explicit_class_view": "View_EquipmentElement",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcproductextension/lexical/ifcequipmentelement.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcproductextension/lexical/ifcequipmentelement.htm",
+      "cached_definition_sha256": "ce5f47246efa999145f626eebeae07d33d1aafdd7c955034fa75a92a9dab2805"
+    },
+    "IfcEquipmentStandard": {
+      "description": "An IfcEquipmentStandard is a standard for equipment allocation that can be assigned to persons within an organization.",
+      "description_method": "short_source_sentence",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcControl",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_EquipmentStandard",
+      "explicit_class_view": "View_EquipmentStandard",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcfacilitiesmgmtdomain/lexical/ifcequipmentstandard.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcfacilitiesmgmtdomain/lexical/ifcequipmentstandard.htm",
+      "cached_definition_sha256": "c5f5a6fdc0f9e7cc27d3032d5f17c61ff6140be2fdfb2d2113f5a0637e76bf74"
+    },
+    "IfcFastener": {
+      "description": "Representations of fixing parts which are used as fasteners to connect or join elements with other elements.",
+      "description_method": "short_source_sentence",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcElementComponent",
+        "IfcElement",
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_Fastener",
+      "explicit_class_view": "View_Fastener",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedcomponentelements/lexical/ifcfastener.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedcomponentelements/lexical/ifcfastener.htm",
+      "cached_definition_sha256": "738ef6b6cab202a0c96f11ebfe4719173b3f9f2ceb722296f8657cac55cf188b"
+    },
+    "IfcFeatureElement": {
+      "description": "Generalization of all existence dependent elements which modify the shape and appearance of the associated master element.",
+      "description_method": "short_source_sentence",
+      "is_abstract": true,
+      "supertypes": [
+        "IfcElement",
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": null,
+      "explicit_class_view": "View_FeatureElement",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcproductextension/lexical/ifcfeatureelement.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcproductextension/lexical/ifcfeatureelement.htm",
+      "cached_definition_sha256": "e8370be5129967f95825d5ed8b70fe0c2470de90628e2023e2e55a1b4c995d49"
+    },
+    "IfcFeatureElementAddition": {
+      "description": "An existence-dependent feature that adds to or otherwise modifies the shape and appearance of a host element.",
+      "description_method": "source_based_paraphrase",
+      "is_abstract": true,
+      "supertypes": [
+        "IfcFeatureElement",
+        "IfcElement",
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": null,
+      "explicit_class_view": "View_FeatureElementAddition",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcproductextension/lexical/ifcfeatureelementaddition.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcproductextension/lexical/ifcfeatureelementaddition.htm",
+      "cached_definition_sha256": "e80e9e3865b286fdbcaf971b8badf6d37ce156f78aa9f27f3c0237436344651e"
+    },
+    "IfcFeatureElementSubtraction": {
+      "description": "An existence-dependent feature that subtracts from or otherwise modifies the shape and appearance of a host element.",
+      "description_method": "source_based_paraphrase",
+      "is_abstract": true,
+      "supertypes": [
+        "IfcFeatureElement",
+        "IfcElement",
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": null,
+      "explicit_class_view": "View_FeatureElementSubtraction",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcproductextension/lexical/ifcfeatureelementsubtraction.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcproductextension/lexical/ifcfeatureelementsubtraction.htm",
+      "cached_definition_sha256": "2f2266d2d067eadf76b2e1b54ff9e215a18df9cd7f685836cbc1d763eff3d403"
+    },
+    "IfcFlowController": {
+      "description": "An element that regulates flow through a distribution system, such as a damper, valve, switch, or relay.",
+      "description_method": "source_based_paraphrase",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcDistributionFlowElement",
+        "IfcDistributionElement",
+        "IfcElement",
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_FlowController",
+      "explicit_class_view": "View_FlowController",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgserviceelements/lexical/ifcflowcontroller.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgserviceelements/lexical/ifcflowcontroller.htm",
+      "cached_definition_sha256": "6d1a8054566c9fa5bfa99edefeffd11bdfae6caa58147f28eb7108f1f9b85d84"
+    },
+    "IfcFlowFitting": {
+      "description": "The distribution flow element IfcFlowFitting defines the occurrence of a junction or transition in a flow distribution system (e.g., elbow, tee, etc.).",
+      "description_method": "short_source_sentence",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcDistributionFlowElement",
+        "IfcDistributionElement",
+        "IfcElement",
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_FlowFitting",
+      "explicit_class_view": "View_FlowFitting",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgserviceelements/lexical/ifcflowfitting.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgserviceelements/lexical/ifcflowfitting.htm",
+      "cached_definition_sha256": "5767fb4a9d6e0c6a8f776796db6d9a05bd2cb736f22c66a01eb4cac490c347b7"
+    },
+    "IfcFlowMovingDevice": {
+      "description": "A device that moves or circulates a liquid or gas through a distribution system, such as a pump or fan.",
+      "description_method": "source_based_paraphrase",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcDistributionFlowElement",
+        "IfcDistributionElement",
+        "IfcElement",
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_FlowMovingDevice",
+      "explicit_class_view": "View_FlowMovingDevice",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgserviceelements/lexical/ifcflowmovingdevice.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgserviceelements/lexical/ifcflowmovingdevice.htm",
+      "cached_definition_sha256": "bec94151f6912e766d850650942a31bac8d11cdbde330e072d199e74488f4cd3"
+    },
+    "IfcFlowSegment": {
+      "description": "A typically straight, continuous, two-port section of a distribution system, such as a pipe or duct section.",
+      "description_method": "source_based_paraphrase",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcDistributionFlowElement",
+        "IfcDistributionElement",
+        "IfcElement",
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_FlowSegment",
+      "explicit_class_view": "View_FlowSegment",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgserviceelements/lexical/ifcflowsegment.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgserviceelements/lexical/ifcflowsegment.htm",
+      "cached_definition_sha256": "32297965d3ca1a4a4de67dba27a0b6313aebd5993f480f2336bcc348bab15737"
+    },
+    "IfcFlowStorageDevice": {
+      "description": "A device used for temporary storage within a distribution system, such as a tank.",
+      "description_method": "source_based_paraphrase",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcDistributionFlowElement",
+        "IfcDistributionElement",
+        "IfcElement",
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_FlowStorageDevice",
+      "explicit_class_view": "View_FlowStorageDevice",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgserviceelements/lexical/ifcflowstoragedevice.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgserviceelements/lexical/ifcflowstoragedevice.htm",
+      "cached_definition_sha256": "69eddb47c40d78446992873c6ef6c3fb407ed3719a5b4659dfaa6f8fea18d931"
+    },
+    "IfcFlowTerminal": {
+      "description": "A permanently attached endpoint or starting point of a distribution system, such as an air outlet, drain, or sink.",
+      "description_method": "source_based_paraphrase",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcDistributionFlowElement",
+        "IfcDistributionElement",
+        "IfcElement",
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_FlowTerminal",
+      "explicit_class_view": "View_FlowTerminal",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgserviceelements/lexical/ifcflowterminal.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgserviceelements/lexical/ifcflowterminal.htm",
+      "cached_definition_sha256": "bc8e8843b0e8859adca01ffacca69aca8ad3df40eedb6fc4b0f082e42576adca"
+    },
+    "IfcFlowTreatmentDevice": {
+      "description": "A distribution-system device that removes unwanted material from a liquid or gas.",
+      "description_method": "source_based_paraphrase",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcDistributionFlowElement",
+        "IfcDistributionElement",
+        "IfcElement",
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_FlowTreatmentDevice",
+      "explicit_class_view": "View_FlowTreatmentDevice",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgserviceelements/lexical/ifcflowtreatmentdevice.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgserviceelements/lexical/ifcflowtreatmentdevice.htm",
+      "cached_definition_sha256": "05c6fff88dc842c1573126d6b05f231fc0497fa8aedfaacbb1afaf462f2e6435"
+    },
+    "IfcFooting": {
+      "description": "A part of the foundation of a structure that spreads and transmits the load directly to the soil.",
+      "description_method": "short_source_sentence",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcBuildingElement",
+        "IfcElement",
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_Footing",
+      "explicit_class_view": "View_Footing",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcstructuralelementsdomain/lexical/ifcfooting.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcstructuralelementsdomain/lexical/ifcfooting.htm",
+      "cached_definition_sha256": "f50255a6d728522c10e26c7f9b712d2c56878248b6d21cec799ba27f4384e53f"
+    },
+    "IfcFurnishingElement": {
+      "description": "Generalization of all furniture related objects.",
+      "description_method": "short_source_sentence",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcElement",
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_FurnishingElement",
+      "explicit_class_view": "View_FurnishingElement",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcproductextension/lexical/ifcfurnishingelement.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcproductextension/lexical/ifcfurnishingelement.htm",
+      "cached_definition_sha256": "c8c9d5d21eb91ad6838d36d308d6ac55c13d4fc819e2f2ad7208c842c6076480"
+    },
+    "IfcFurnitureStandard": {
+      "description": "An IfcFurnitureStandard is a standard for furniture allocation that can be assigned to persons within an organization.",
+      "description_method": "short_source_sentence",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcControl",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_FurnitureStandard",
+      "explicit_class_view": "View_FurnitureStandard",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcfacilitiesmgmtdomain/lexical/ifcfurniturestandard.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcfacilitiesmgmtdomain/lexical/ifcfurniturestandard.htm",
+      "cached_definition_sha256": "72f2707781ec06587c06a13a3659804139c05b9ec30eb8630cc70222b4649947"
+    },
+    "IfcGrid": {
+      "description": "A planar design grid positioned in three-dimensional space to locate structural and other design elements.",
+      "description_method": "source_based_paraphrase",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_Grid",
+      "explicit_class_view": "View_Grid",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcproductextension/lexical/ifcgrid.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcproductextension/lexical/ifcgrid.htm",
+      "cached_definition_sha256": "a247733514379ef56367889543aadef56c47fa9b90098a33ff92b46ccd9755d5"
+    },
+    "IfcGroup": {
+      "description": "An arbitrary grouping of objects for a shared purpose or organizational context.",
+      "description_method": "source_based_paraphrase",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_Group",
+      "explicit_class_view": "View_Group",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifckernel/lexical/ifcgroup.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifckernel/lexical/ifcgroup.htm",
+      "cached_definition_sha256": "0b3a61535d696c97cf80684023234d229f5650463b0b9809ac3db0e0d870e8ae"
+    },
+    "IfcInventory": {
+      "description": "An IfcInventory is a list of items within an enterprise.",
+      "description_method": "short_source_sentence",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcGroup",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_Inventory",
+      "explicit_class_view": "View_Inventory",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedfacilitieselements/lexical/ifcinventory.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedfacilitieselements/lexical/ifcinventory.htm",
+      "cached_definition_sha256": "4da2d886405dc980e9ab952bcce1e0f1ac14f87a4c1ed998d083ee16973775ed"
+    },
+    "IfcLaborResource": {
+      "description": "An IfcLaborResource is used in construction with particular skills or crafts required to perform certain types of construction or management related work.",
+      "description_method": "short_source_sentence",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcConstructionResource",
+        "IfcResource",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_LaborResource",
+      "explicit_class_view": "View_LaborResource",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcconstructionmgmtdomain/lexical/ifclaborresource.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcconstructionmgmtdomain/lexical/ifclaborresource.htm",
+      "cached_definition_sha256": "2f2955fc33aa5c5c8325cea5905889ff3c0666a31e66961614e4ac32769d0070"
+    },
+    "IfcMechanicalFastener": {
+      "description": "A component that mechanically joins building elements or their parts.",
+      "description_method": "source_based_paraphrase",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcFastener",
+        "IfcElementComponent",
+        "IfcElement",
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_MechanicalFastener",
+      "explicit_class_view": "View_MechanicalFastener",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedcomponentelements/lexical/ifcmechanicalfastener.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedcomponentelements/lexical/ifcmechanicalfastener.htm",
+      "cached_definition_sha256": "ac586c57b86428008e1aaf7cedfbfe0963611b040bb9588812cbbd9001fd3a2f"
+    },
+    "IfcMember": {
+      "description": "An IfcMember is a structural member designed to carry loads between or beyond points of support.",
+      "description_method": "short_source_sentence",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcBuildingElement",
+        "IfcElement",
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_Member",
+      "explicit_class_view": "View_Member",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgelements/lexical/ifcmember.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgelements/lexical/ifcmember.htm",
+      "cached_definition_sha256": "c7f6e92d214d7e4590612b2336ec08cad8baea06679b13bd9c6dd2025cb712e7"
+    },
+    "IfcMove": {
+      "description": "An activity relocating people, organizational groups, or organizations together with their furniture and equipment.",
+      "description_method": "source_based_paraphrase",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcTask",
+        "IfcProcess",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_Move",
+      "explicit_class_view": "View_Move",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcfacilitiesmgmtdomain/lexical/ifcmove.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcfacilitiesmgmtdomain/lexical/ifcmove.htm",
+      "cached_definition_sha256": "b1796dceda10258302b5d857650c706fd6217b0c46038aa8c90b1af1b78f28dc"
+    },
+    "IfcObject": {
+      "description": "An IfcObject is the generalization of any semantically treated thing or process.",
+      "description_method": "short_source_sentence",
+      "is_abstract": true,
+      "supertypes": [
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": null,
+      "explicit_class_view": "View_Object",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifckernel/lexical/ifcobject.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifckernel/lexical/ifcobject.htm",
+      "cached_definition_sha256": "dede39280352c9e24a6bbd04c6241e710caf804eca42ecd202dc64b180cf38a3"
+    },
+    "IfcObjectDefinition": {
+      "description": "A general semantic definition of an object or process, including object occurrences and object types.",
+      "description_method": "source_based_paraphrase",
+      "is_abstract": true,
+      "supertypes": [
+        "IfcRoot"
+      ],
+      "default_view": null,
+      "explicit_class_view": "View_ObjectDefinition",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifckernel/lexical/ifcobjectdefinition.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifckernel/lexical/ifcobjectdefinition.htm",
+      "cached_definition_sha256": "3bf516231541cda2edb95ad3b261de1f84ac4d963c9522f9bb2b1b20dd571e13"
+    },
+    "IfcOccupant": {
+      "description": "An actor identifying the form of occupancy of a property.",
+      "description_method": "source_based_paraphrase",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcActor",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_Occupant",
+      "explicit_class_view": "View_Occupant",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedfacilitieselements/lexical/ifcoccupant.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedfacilitieselements/lexical/ifcoccupant.htm",
+      "cached_definition_sha256": "ef7715823cc68c2eaf0be68472d969c9aad3679cacdbe7ce1d39b351b8fc8b5d"
+    },
+    "IfcOpeningElement": {
+      "description": "The opening element stands for opening, recess or chase, all reflecting voids.",
+      "description_method": "short_source_sentence",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcFeatureElementSubtraction",
+        "IfcFeatureElement",
+        "IfcElement",
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_OpeningElement",
+      "explicit_class_view": "View_OpeningElement",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcproductextension/lexical/ifcopeningelement.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcproductextension/lexical/ifcopeningelement.htm",
+      "cached_definition_sha256": "545946633c512ee9f685503c3fefa31aba30e51af828eb7999a5ebd7c16c1e6d"
+    },
+    "IfcOrderAction": {
+      "description": "An IfcOrderAction is the point at which requests for work are received and processed within an organization.",
+      "description_method": "short_source_sentence",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcTask",
+        "IfcProcess",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_OrderAction",
+      "explicit_class_view": "View_OrderAction",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcfacilitiesmgmtdomain/lexical/ifcorderaction.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcfacilitiesmgmtdomain/lexical/ifcorderaction.htm",
+      "cached_definition_sha256": "d11720364e942daa80032475b883ad1b2fdf1406f02203a010df1ec78fcd2514"
+    },
+    "IfcPerformanceHistory": {
+      "description": "The IfcPerformanceHistory is used to document the actual performance of an occurrence instance over time.",
+      "description_method": "short_source_sentence",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcControl",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_PerformanceHistory",
+      "explicit_class_view": "View_PerformanceHistory",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifccontrolextension/lexical/ifcperformancehistory.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifccontrolextension/lexical/ifcperformancehistory.htm",
+      "cached_definition_sha256": "46618a85e9d5bea096a3d42db56ba4ab7d8976226421dbaa1d8af959409bf7b6"
+    },
+    "IfcPermit": {
+      "description": "An IfcPermit is a document that allows permission to carry out actions in places and on artifacts where security or other access restrictions apply.",
+      "description_method": "short_source_sentence",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcControl",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_Permit",
+      "explicit_class_view": "View_Permit",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcfacilitiesmgmtdomain/lexical/ifcpermit.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcfacilitiesmgmtdomain/lexical/ifcpermit.htm",
+      "cached_definition_sha256": "2ce1eb9c4b1be77642bedda93bad52934768a5419af02f476d6d7af9335c3508"
+    },
+    "IfcPile": {
+      "description": "A slender foundation member embedded into the ground to support a load.",
+      "description_method": "source_based_paraphrase",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcBuildingElement",
+        "IfcElement",
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_Pile",
+      "explicit_class_view": "View_Pile",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcstructuralelementsdomain/lexical/ifcpile.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcstructuralelementsdomain/lexical/ifcpile.htm",
+      "cached_definition_sha256": "01577701a3d989c4eeb3c5ec65f6d92dc10a4ce2859862617150be54428d4011"
+    },
+    "IfcPlate": {
+      "description": "An IfcPlate is a planar and often flat part with constant thickness.",
+      "description_method": "short_source_sentence",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcBuildingElement",
+        "IfcElement",
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_Plate",
+      "explicit_class_view": "View_Plate",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgelements/lexical/ifcplate.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgelements/lexical/ifcplate.htm",
+      "cached_definition_sha256": "a81469138219cfd93e810e48ef6f0446a78f7de3091ae1da3c40ee2d8aeca636"
+    },
+    "IfcPort": {
+      "description": "An IfcPort provides the means for an element to connect to other elements.",
+      "description_method": "short_source_sentence",
+      "is_abstract": true,
+      "supertypes": [
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": null,
+      "explicit_class_view": "View_Port",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcproductextension/lexical/ifcport.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcproductextension/lexical/ifcport.htm",
+      "cached_definition_sha256": "7e4694864db4759d866e315450e5ce47aac10c5f55d4e83c79a1bdd933194be4"
+    },
+    "IfcProcedure": {
+      "description": "An IfcProcedure is an identifiable step to be taken within a process that is considered to occur over zero or a non-measurable period of time.",
+      "description_method": "short_source_sentence",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcProcess",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_Procedure",
+      "explicit_class_view": "View_Procedure",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcprocessextension/lexical/ifcprocedure.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcprocessextension/lexical/ifcprocedure.htm",
+      "cached_definition_sha256": "ef3cf8c811c0d59c986bc5e22c64fbfc76efb6ae53c68edbada97d711a61697f"
+    },
+    "IfcProcess": {
+      "description": "An activity in construction, design, costing, procurement, maintenance, or a related process.",
+      "description_method": "source_based_paraphrase",
+      "is_abstract": true,
+      "supertypes": [
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": null,
+      "explicit_class_view": "View_Process",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifckernel/lexical/ifcprocess.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifckernel/lexical/ifcprocess.htm",
+      "cached_definition_sha256": "50ee29be33a5f3f0e0357527fe504a361ebe5e618e529534730b2b2cef8846c1"
+    },
+    "IfcProduct": {
+      "description": "Any object, or any aid to define, organize and annotate an object, that relates to a geometric or spatial context.",
+      "description_method": "short_source_sentence",
+      "is_abstract": true,
+      "supertypes": [
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": null,
+      "explicit_class_view": "View_Product",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifckernel/lexical/ifcproduct.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifckernel/lexical/ifcproduct.htm",
+      "cached_definition_sha256": "0b796630e917cb9efc5d5f7594e1113cf447877b3e90649196bd073e3151a0fc"
+    },
+    "IfcProject": {
+      "description": "The undertaking of some design, engineering, construction, or maintenance activities leading towards a product.",
+      "description_method": "short_source_sentence",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_Project",
+      "explicit_class_view": "View_Project",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifckernel/lexical/ifcproject.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifckernel/lexical/ifcproject.htm",
+      "cached_definition_sha256": "ed83e79b755a594e4442bc890cc9d7b647a4dc8500d682300707f272597d2014"
+    },
+    "IfcProjectOrder": {
+      "description": "An IfcProjectOrder sets common properties for project orders issued in a construction or facilities management project.",
+      "description_method": "short_source_sentence",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcControl",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_ProjectOrder",
+      "explicit_class_view": "View_ProjectOrder",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedmgmtelements/lexical/ifcprojectorder.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedmgmtelements/lexical/ifcprojectorder.htm",
+      "cached_definition_sha256": "fb7897bd94806b4baac58deb1a5111ecc7d46894583b8776750471dbf5f2d0b0"
+    },
+    "IfcProjectOrderRecord": {
+      "description": "An IfcProjectOrderRecord records information in sequence about the incidence of each order that is connected with one or a set of objects.",
+      "description_method": "short_source_sentence",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcControl",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_ProjectOrderRecord",
+      "explicit_class_view": "View_ProjectOrderRecord",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedmgmtelements/lexical/ifcprojectorderrecord.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedmgmtelements/lexical/ifcprojectorderrecord.htm",
+      "cached_definition_sha256": "849688f238d4b3690431285603dc1d2080a237c3f98eee1215f7c6c74c954b88"
+    },
+    "IfcProjectionElement": {
+      "description": "The IfcProjectionElement is a specialization of the general feature element to represent projections applied to building elements.",
+      "description_method": "short_source_sentence",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcFeatureElementAddition",
+        "IfcFeatureElement",
+        "IfcElement",
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_ProjectionElement",
+      "explicit_class_view": "View_ProjectionElement",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcproductextension/lexical/ifcprojectionelement.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcproductextension/lexical/ifcprojectionelement.htm",
+      "cached_definition_sha256": "f42f71df04fc4c5594033626124cd6a2f62fe1e91c704cedda9ef9f736d3abd0"
+    },
+    "IfcProxy": {
+      "description": "A generic container for an object described by associated properties, with optional geometric representation and spatial placement.",
+      "description_method": "source_based_paraphrase",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_Proxy",
+      "explicit_class_view": "View_Proxy",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifckernel/lexical/ifcproxy.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifckernel/lexical/ifcproxy.htm",
+      "cached_definition_sha256": "d0574e9997e0ab9c09d641d3411cd6cc7391df1c1ebad7511ab3c24007c4fd08"
+    },
+    "IfcRailing": {
+      "description": "A frame assembly beside circulation spaces or boundaries, used in place of or together with walls.",
+      "description_method": "source_based_paraphrase",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcBuildingElement",
+        "IfcElement",
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_Railing",
+      "explicit_class_view": "View_Railing",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgelements/lexical/ifcrailing.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgelements/lexical/ifcrailing.htm",
+      "cached_definition_sha256": "cea1e03bd764236b34727d0f38966f71fb22385aa05cd7dbf81ed4e73ffd7431"
+    },
+    "IfcRamp": {
+      "description": "An inclined passage linking levels at different elevations.",
+      "description_method": "source_based_paraphrase",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcBuildingElement",
+        "IfcElement",
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_Ramp",
+      "explicit_class_view": "View_Ramp",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgelements/lexical/ifcramp.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgelements/lexical/ifcramp.htm",
+      "cached_definition_sha256": "5ddacf05fc7f143e98fa3871acb55dae188f8bfa52e911d8e1458f0d2c4d4811"
+    },
+    "IfcRampFlight": {
+      "description": "A single inclined ramp segment connecting landings, floors, or slabs at different elevations.",
+      "description_method": "source_based_paraphrase",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcBuildingElement",
+        "IfcElement",
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_RampFlight",
+      "explicit_class_view": "View_RampFlight",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgelements/lexical/ifcrampflight.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgelements/lexical/ifcrampflight.htm",
+      "cached_definition_sha256": "aac72664a08535fcf20265767e993fe7d41c7ee61569b517b4e602bd7c65b8bc"
+    },
+    "IfcReinforcingBar": {
+      "description": "A steel bar, usually with manufactured deformations in the surface, used in concrete and masonry construction to provide additional strength.",
+      "description_method": "short_source_sentence",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcReinforcingElement",
+        "IfcBuildingElementComponent",
+        "IfcBuildingElement",
+        "IfcElement",
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_ReinforcingBar",
+      "explicit_class_view": "View_ReinforcingBar",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcstructuralelementsdomain/lexical/ifcreinforcingbar.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcstructuralelementsdomain/lexical/ifcreinforcingbar.htm",
+      "cached_definition_sha256": "31a2baa67fd9596017d1e988c15cb8d898de4f8ef1adcdb1d188ab2e00f39b44"
+    },
+    "IfcReinforcingElement": {
+      "description": "A component embedded in concrete so that it acts together with the concrete to resist forces.",
+      "description_method": "source_based_paraphrase",
+      "is_abstract": true,
+      "supertypes": [
+        "IfcBuildingElementComponent",
+        "IfcBuildingElement",
+        "IfcElement",
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": null,
+      "explicit_class_view": "View_ReinforcingElement",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcstructuralelementsdomain/lexical/ifcreinforcingelement.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcstructuralelementsdomain/lexical/ifcreinforcingelement.htm",
+      "cached_definition_sha256": "b996aea7de1c09d5fbcffc2356f6167295edc3ebaa54d306b26283a15ef327e2"
+    },
+    "IfcReinforcingMesh": {
+      "description": "A welded grid of longitudinal and transverse wires or bars, commonly used to reinforce concrete slabs.",
+      "description_method": "source_based_paraphrase",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcReinforcingElement",
+        "IfcBuildingElementComponent",
+        "IfcBuildingElement",
+        "IfcElement",
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_ReinforcingMesh",
+      "explicit_class_view": "View_ReinforcingMesh",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcstructuralelementsdomain/lexical/ifcreinforcingmesh.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcstructuralelementsdomain/lexical/ifcreinforcingmesh.htm",
+      "cached_definition_sha256": "68b2842875c0120db4e0cf8c29671fc095d38bbef1e3a0efade4ff08a77c98f9"
+    },
+    "IfcResource": {
+      "description": "The IfcResource contains the information needed to represent the costs, schedule, and other impacts from the use of a thing in a process.",
+      "description_method": "short_source_sentence",
+      "is_abstract": true,
+      "supertypes": [
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": null,
+      "explicit_class_view": "View_Resource",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifckernel/lexical/ifcresource.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifckernel/lexical/ifcresource.htm",
+      "cached_definition_sha256": "574aa712ab9a245c27fffb775e2f42305622585ed6d26cdba5ef674825507a24"
+    },
+    "IfcRoof": {
+      "description": "The top covering of a building, protecting it from weather.",
+      "description_method": "source_based_paraphrase",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcBuildingElement",
+        "IfcElement",
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_Roof",
+      "explicit_class_view": "View_Roof",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgelements/lexical/ifcroof.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgelements/lexical/ifcroof.htm",
+      "cached_definition_sha256": "faebb9bad4fe4dbe1c534094ae2f8e7397eb92f14e8900134e66a96a32165414"
+    },
+    "IfcRoundedEdgeFeature": {
+      "description": "An edge feature with a rounded cross section shape.",
+      "description_method": "short_source_sentence",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcEdgeFeature",
+        "IfcFeatureElementSubtraction",
+        "IfcFeatureElement",
+        "IfcElement",
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_RoundedEdgeFeature",
+      "explicit_class_view": "View_RoundedEdgeFeature",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedcomponentelements/lexical/ifcroundededgefeature.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedcomponentelements/lexical/ifcroundededgefeature.htm",
+      "cached_definition_sha256": "b325e408d3ade0d74ffc713316a27170b0517468eb531d11228ca00ba108454d"
+    },
+    "IfcScheduleTimeControl": {
+      "description": "Time-related process information, including actual or scheduled start and finish times, duration, and float.",
+      "description_method": "source_based_paraphrase",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcControl",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_ScheduleTimeControl",
+      "explicit_class_view": "View_ScheduleTimeControl",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcprocessextension/lexical/ifcscheduletimecontrol.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcprocessextension/lexical/ifcscheduletimecontrol.htm",
+      "cached_definition_sha256": "fdba14cae5bbab0b969b80db21a1d77d17e6bd83cc79ef631928cffe5bf871b2"
+    },
+    "IfcServiceLife": {
+      "description": "An IfcServiceLife is the period of time that an artefact (typically a product or asset) will last.",
+      "description_method": "short_source_sentence",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcControl",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_ServiceLife",
+      "explicit_class_view": "View_ServiceLife",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedfacilitieselements/lexical/ifcservicelife.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedfacilitieselements/lexical/ifcservicelife.htm",
+      "cached_definition_sha256": "fe709765a73b6f7d9a41368a63f344fb2009a6be19946bab04be942f1ca30bab"
+    },
+    "IfcSite": {
+      "description": "Area where construction works are undertaken.",
+      "description_method": "short_source_sentence",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcSpatialStructureElement",
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_Site",
+      "explicit_class_view": "View_Site",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcproductextension/lexical/ifcsite.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcproductextension/lexical/ifcsite.htm",
+      "cached_definition_sha256": "ace9c8475f283d0ddb4a689cac6d8461f991c47a055c328286d959422fc77bf8"
+    },
+    "IfcSlab": {
+      "description": "A slab is a component of the construction that normally encloses a space vertically.",
+      "description_method": "short_source_sentence",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcBuildingElement",
+        "IfcElement",
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_Slab",
+      "explicit_class_view": "View_Slab",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgelements/lexical/ifcslab.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgelements/lexical/ifcslab.htm",
+      "cached_definition_sha256": "423b26e7768e01745dfcc7dec0b5de1570d935a4f14e0e1cb569a7cfbba00a94"
+    },
+    "IfcSpace": {
+      "description": "A space represents an area or volume bounded actually or theoretically.",
+      "description_method": "short_source_sentence",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcSpatialStructureElement",
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_Space",
+      "explicit_class_view": "View_Space",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcproductextension/lexical/ifcspace.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcproductextension/lexical/ifcspace.htm",
+      "cached_definition_sha256": "4a4114155de3d49ceb40990072b18073fc4949cf54ff7de2c3079bb7a3144fd5"
+    },
+    "IfcSpaceProgram": {
+      "description": "Architectural program for a space in the building or facility being designed; essentially the requirements definition for such a building space.",
+      "description_method": "short_source_sentence",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcControl",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_SpaceProgram",
+      "explicit_class_view": "View_SpaceProgram",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcarchitecturedomain/lexical/ifcspaceprogram.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcarchitecturedomain/lexical/ifcspaceprogram.htm",
+      "cached_definition_sha256": "abedb8944fe18f2b12332d3ea01dfcfa2d17cbe2a98d2f1efff28cf8c43c5abb"
+    },
+    "IfcSpatialStructureElement": {
+      "description": "A spatial structure element (IfcSpatialStructureElement) is the generalization of all spatial elements that might be used to define a spatial structure.",
+      "description_method": "short_source_sentence",
+      "is_abstract": true,
+      "supertypes": [
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": null,
+      "explicit_class_view": "View_SpatialStructureElement",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcproductextension/lexical/ifcspatialstructureelement.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcproductextension/lexical/ifcspatialstructureelement.htm",
+      "cached_definition_sha256": "779afc0dcfd3d99a6b11764fad35cd52db6ae16df1d2361d02844b36be0011ad"
+    },
+    "IfcStair": {
+      "description": "Construction comprising a succession of horizontal stages (steps or landings) that make it possible to pass on foot to other levels.",
+      "description_method": "short_source_sentence",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcBuildingElement",
+        "IfcElement",
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_Stair",
+      "explicit_class_view": "View_Stair",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgelements/lexical/ifcstair.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgelements/lexical/ifcstair.htm",
+      "cached_definition_sha256": "2ace1223898dcb79aa50a47f2de1cb8a77276943c451344539f4dc4b9c7c5c70"
+    },
+    "IfcStairFlight": {
+      "description": "Assembly of building components in a single \"run\" of stair steps (not interrupted by a landing).",
+      "description_method": "short_source_sentence",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcBuildingElement",
+        "IfcElement",
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_StairFlight",
+      "explicit_class_view": "View_StairFlight",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgelements/lexical/ifcstairflight.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgelements/lexical/ifcstairflight.htm",
+      "cached_definition_sha256": "1fda1f2cdf4430d8c6de46b6a3e49f3be6b617fcc2fc0b414c7b25015da73be9"
+    },
+    "IfcStructuralAction": {
+      "description": "A structural action is a structural activity that acts upon a structural item or building element.",
+      "description_method": "short_source_sentence",
+      "is_abstract": true,
+      "supertypes": [
+        "IfcStructuralActivity",
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": null,
+      "explicit_class_view": "View_StructuralAction",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcstructuralanalysisdomain/lexical/ifcstructuralaction.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcstructuralanalysisdomain/lexical/ifcstructuralaction.htm",
+      "cached_definition_sha256": "7d8483c2dcb3aa7e3579fb38e350fffc5407e64a80a6cac917915aba4a820c86"
+    },
+    "IfcStructuralActivity": {
+      "description": "A structural action or reaction, such as a load, displacement, support reaction, internal force, or deflection.",
+      "description_method": "source_based_paraphrase",
+      "is_abstract": true,
+      "supertypes": [
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": null,
+      "explicit_class_view": "View_StructuralActivity",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcstructuralanalysisdomain/lexical/ifcstructuralactivity.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcstructuralanalysisdomain/lexical/ifcstructuralactivity.htm",
+      "cached_definition_sha256": "a7ab42edd888aa73185bb1c77ade0455ced1c6947a7c7c7630cd817768822c5d"
+    },
+    "IfcStructuralAnalysisModel": {
+      "description": "The IfcStructuralAnalysisModel is used to assemble all information needed to represent a structural analysis model.",
+      "description_method": "short_source_sentence",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcSystem",
+        "IfcGroup",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_StructuralAnalysisModel",
+      "explicit_class_view": "View_StructuralAnalysisModel",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcstructuralanalysisdomain/lexical/ifcstructuralanalysismodel.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcstructuralanalysisdomain/lexical/ifcstructuralanalysismodel.htm",
+      "cached_definition_sha256": "4a2413466537743cd36a94a46df7ee82d570f56f620431d618721e2f072a3e3c"
+    },
+    "IfcStructuralConnection": {
+      "description": "The abstract entity IfcStructuralConnection is the superclass of entities representing structural supports or connecting elements (nodes).",
+      "description_method": "short_source_sentence",
+      "is_abstract": true,
+      "supertypes": [
+        "IfcStructuralItem",
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": null,
+      "explicit_class_view": "View_StructuralConnection",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcstructuralanalysisdomain/lexical/ifcstructuralconnection.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcstructuralanalysisdomain/lexical/ifcstructuralconnection.htm",
+      "cached_definition_sha256": "165293c630fb9ab509559383bc5626c72eeb6c232837064cb1736c6135f017ce"
+    },
+    "IfcStructuralCurveConnection": {
+      "description": "A linear structural-analysis connection or support where surface members meet along an edge.",
+      "description_method": "source_based_paraphrase",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcStructuralConnection",
+        "IfcStructuralItem",
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_StructuralCurveConnection",
+      "explicit_class_view": "View_StructuralCurveConnection",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcstructuralanalysisdomain/lexical/ifcstructuralcurveconnection.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcstructuralanalysisdomain/lexical/ifcstructuralcurveconnection.htm",
+      "cached_definition_sha256": "d76d7fbbc0d1827315a7f234be015d213eaa811630cbfd8794e6f37b77dcb056"
+    },
+    "IfcStructuralCurveMember": {
+      "description": "A linear structural-analysis idealization of a member such as a beam, column, or rod.",
+      "description_method": "source_based_paraphrase",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcStructuralMember",
+        "IfcStructuralItem",
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_StructuralCurveMember",
+      "explicit_class_view": "View_StructuralCurveMember",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcstructuralanalysisdomain/lexical/ifcstructuralcurvemember.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcstructuralanalysisdomain/lexical/ifcstructuralcurvemember.htm",
+      "cached_definition_sha256": "08252d0b0011d04cdfd40e0eeb6f04e40f248180a7979df0187a1e4e94a1be45"
+    },
+    "IfcStructuralCurveMemberVarying": {
+      "description": "Instances of the entity IfcStructuralCurveMemberVarying shall be used to describe linear structural elements with varying profile properties.",
+      "description_method": "short_source_sentence",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcStructuralCurveMember",
+        "IfcStructuralMember",
+        "IfcStructuralItem",
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_StructuralCurveMember",
+      "explicit_class_view": "View_StructuralCurveMemberVarying",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcstructuralanalysisdomain/lexical/ifcstructuralcurvemembervarying.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcstructuralanalysisdomain/lexical/ifcstructuralcurvemembervarying.htm",
+      "cached_definition_sha256": "fd3001c52cbeb76f2f816626a4401c8c6a482e5039365ca5d874c1ffac079354"
+    },
+    "IfcStructuralItem": {
+      "description": "An abstract structural-analysis item covering structural members and structural connections and their associations with structural actions.",
+      "description_method": "source_based_paraphrase",
+      "is_abstract": true,
+      "supertypes": [
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": null,
+      "explicit_class_view": "View_StructuralItem",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcstructuralanalysisdomain/lexical/ifcstructuralitem.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcstructuralanalysisdomain/lexical/ifcstructuralitem.htm",
+      "cached_definition_sha256": "abcd7a3d185eec1c57d03425e216355053b6ffb7dfd90f17de9b9cd986184065"
+    },
+    "IfcStructuralLinearAction": {
+      "description": "Instances of the entity IfcStructuralLinearAction are used to define constant linear actions.",
+      "description_method": "short_source_sentence",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcStructuralAction",
+        "IfcStructuralActivity",
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_StructuralLinearAction",
+      "explicit_class_view": "View_StructuralLinearAction",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcstructuralanalysisdomain/lexical/ifcstructurallinearaction.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcstructuralanalysisdomain/lexical/ifcstructurallinearaction.htm",
+      "cached_definition_sha256": "64d163519c454f38ef4edb056cd05d7a6b036026a2bb79aec405b9e69c1e70c6"
+    },
+    "IfcStructuralLinearActionVarying": {
+      "description": "Instances of the entity IfcStructuralLinearActionVarying are used to define varying linear actions.",
+      "description_method": "short_source_sentence",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcStructuralLinearAction",
+        "IfcStructuralAction",
+        "IfcStructuralActivity",
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_StructuralLinearAction",
+      "explicit_class_view": "View_StructuralLinearActionVarying",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcstructuralanalysisdomain/lexical/ifcstructurallinearactionvarying.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcstructuralanalysisdomain/lexical/ifcstructurallinearactionvarying.htm",
+      "cached_definition_sha256": "a7e6ff85cc3d02933c655bc9410a3b67a21473e9bf13f3cb1036108812aa8069"
+    },
+    "IfcStructuralLoadGroup": {
+      "description": "The entity IfcStructuralLoadGroup is used to structure the physical impacts.",
+      "description_method": "short_source_sentence",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcGroup",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_StructuralLoadGroup",
+      "explicit_class_view": "View_StructuralLoadGroup",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcstructuralanalysisdomain/lexical/ifcstructuralloadgroup.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcstructuralanalysisdomain/lexical/ifcstructuralloadgroup.htm",
+      "cached_definition_sha256": "ec70c79f981bf1eaa4bf1144e29e755be344557d2959ad7c177867d1c71d97a0"
+    },
+    "IfcStructuralMember": {
+      "description": "The abstract entity IfcStructuralMember is the superclass of all structural elements representing the structural behavior of building elements.",
+      "description_method": "short_source_sentence",
+      "is_abstract": true,
+      "supertypes": [
+        "IfcStructuralItem",
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": null,
+      "explicit_class_view": "View_StructuralMember",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcstructuralanalysisdomain/lexical/ifcstructuralmember.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcstructuralanalysisdomain/lexical/ifcstructuralmember.htm",
+      "cached_definition_sha256": "410184013bb8afc5a8497967a72432407a2585412e3a15138638af1805619faa"
+    },
+    "IfcStructuralPlanarAction": {
+      "description": "Instances of the entity IfcStructuralPlanarAction are used to define constant planar actions.",
+      "description_method": "short_source_sentence",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcStructuralAction",
+        "IfcStructuralActivity",
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_StructuralPlanarAction",
+      "explicit_class_view": "View_StructuralPlanarAction",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcstructuralanalysisdomain/lexical/ifcstructuralplanaraction.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcstructuralanalysisdomain/lexical/ifcstructuralplanaraction.htm",
+      "cached_definition_sha256": "b4a1e62383c6c42790b892dafbee0c6a206de1452cfa4b877a0cd8931889522f"
+    },
+    "IfcStructuralPlanarActionVarying": {
+      "description": "Instances of the entity IfcStructuralPlanarActionVarying are used to define varying planar actions.",
+      "description_method": "short_source_sentence",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcStructuralPlanarAction",
+        "IfcStructuralAction",
+        "IfcStructuralActivity",
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_StructuralPlanarAction",
+      "explicit_class_view": "View_StructuralPlanarActionVarying",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcstructuralanalysisdomain/lexical/ifcstructuralplanaractionvarying.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcstructuralanalysisdomain/lexical/ifcstructuralplanaractionvarying.htm",
+      "cached_definition_sha256": "519857bdd8edbfadc9c3faba6d64c64d12cfa0defc62f952c890a6f2bf01432a"
+    },
+    "IfcStructuralPointAction": {
+      "description": "Instances of the entity IfcStructuralPointAction are used to define point actions.",
+      "description_method": "short_source_sentence",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcStructuralAction",
+        "IfcStructuralActivity",
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_StructuralPointAction",
+      "explicit_class_view": "View_StructuralPointAction",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcstructuralanalysisdomain/lexical/ifcstructuralpointaction.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcstructuralanalysisdomain/lexical/ifcstructuralpointaction.htm",
+      "cached_definition_sha256": "b55003c2ec65e9d6c7c1b8a019125cb9a1d4111906a523ea3b4a1ef6d1c6deb1"
+    },
+    "IfcStructuralPointConnection": {
+      "description": "Instances of the entity IfcStructuralPointConnection shall be used to describe structural nodes or point supports.",
+      "description_method": "short_source_sentence",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcStructuralConnection",
+        "IfcStructuralItem",
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_StructuralPointConnection",
+      "explicit_class_view": "View_StructuralPointConnection",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcstructuralanalysisdomain/lexical/ifcstructuralpointconnection.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcstructuralanalysisdomain/lexical/ifcstructuralpointconnection.htm",
+      "cached_definition_sha256": "7aab5592807ba868d428f1a204c3eab6d414433bb4cd795043b5a1931d226e53"
+    },
+    "IfcStructuralPointReaction": {
+      "description": "Instances of the entity IfcStructuralPointReaction are used to define point reactions.",
+      "description_method": "short_source_sentence",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcStructuralReaction",
+        "IfcStructuralActivity",
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_StructuralPointReaction",
+      "explicit_class_view": "View_StructuralPointReaction",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcstructuralanalysisdomain/lexical/ifcstructuralpointreaction.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcstructuralanalysisdomain/lexical/ifcstructuralpointreaction.htm",
+      "cached_definition_sha256": "9915afb1404476d90817ebfae180de21d72577539826d65cd9e4caafc48cfee3"
+    },
+    "IfcStructuralReaction": {
+      "description": "A structural reaction is a structural activity that results from a structural action imposed to a structural item or building element.",
+      "description_method": "short_source_sentence",
+      "is_abstract": true,
+      "supertypes": [
+        "IfcStructuralActivity",
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": null,
+      "explicit_class_view": "View_StructuralReaction",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcstructuralanalysisdomain/lexical/ifcstructuralreaction.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcstructuralanalysisdomain/lexical/ifcstructuralreaction.htm",
+      "cached_definition_sha256": "bf7a93c759946194b27997de1a75a3cccabb89db5559cf13cdd71cf2f0c5f8da"
+    },
+    "IfcStructuralResultGroup": {
+      "description": "Instances of the entity IfcStructuralResultGroup are used to group results of structural analysis calculations and to capture the connection to the underlying basic load group.",
+      "description_method": "short_source_sentence",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcGroup",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_StructuralResultGroup",
+      "explicit_class_view": "View_StructuralResultGroup",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcstructuralanalysisdomain/lexical/ifcstructuralresultgroup.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcstructuralanalysisdomain/lexical/ifcstructuralresultgroup.htm",
+      "cached_definition_sha256": "75c8f856556a8a4b0cc665d8cf4283fc692dfd8be116345f8f27afbdb9c96f53"
+    },
+    "IfcStructuralSurfaceConnection": {
+      "description": "A surface structural-analysis connection or support where members meet over a face.",
+      "description_method": "source_based_paraphrase",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcStructuralConnection",
+        "IfcStructuralItem",
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_StructuralSurfaceConnection",
+      "explicit_class_view": "View_StructuralSurfaceConnection",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcstructuralanalysisdomain/lexical/ifcstructuralsurfaceconnection.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcstructuralanalysisdomain/lexical/ifcstructuralsurfaceconnection.htm",
+      "cached_definition_sha256": "44a3ef95519507d29ed89213540dd29abd37bd5f54f58d77403e2fcf61f824c2"
+    },
+    "IfcStructuralSurfaceMember": {
+      "description": "A surface structural-analysis idealization of a member such as a slab, wall, or shell.",
+      "description_method": "source_based_paraphrase",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcStructuralMember",
+        "IfcStructuralItem",
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_StructuralSurfaceMember",
+      "explicit_class_view": "View_StructuralSurfaceMember",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcstructuralanalysisdomain/lexical/ifcstructuralsurfacemember.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcstructuralanalysisdomain/lexical/ifcstructuralsurfacemember.htm",
+      "cached_definition_sha256": "fcef5d415f34067152373120e5f9488fa901f12bfd385ee97f838d86a832dec2"
+    },
+    "IfcStructuralSurfaceMemberVarying": {
+      "description": "Instances of the entity IfcStructuralSurfaceMemberVarying shall be used to describe planar structural elements with a varying thickness.",
+      "description_method": "short_source_sentence",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcStructuralSurfaceMember",
+        "IfcStructuralMember",
+        "IfcStructuralItem",
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_StructuralSurfaceMember",
+      "explicit_class_view": "View_StructuralSurfaceMemberVarying",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcstructuralanalysisdomain/lexical/ifcstructuralsurfacemembervarying.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcstructuralanalysisdomain/lexical/ifcstructuralsurfacemembervarying.htm",
+      "cached_definition_sha256": "fab7aa1178d4c408e58d203f62fc4448023f1c54fe0fa68e7571824b053a66fd"
+    },
+    "IfcSubContractResource": {
+      "description": "An IfcSubContractResource is a construction resource needed in a construction process that represents a type of sub-contractor.",
+      "description_method": "short_source_sentence",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcConstructionResource",
+        "IfcResource",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_SubContractResource",
+      "explicit_class_view": "View_SubContractResource",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcconstructionmgmtdomain/lexical/ifcsubcontractresource.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcconstructionmgmtdomain/lexical/ifcsubcontractresource.htm",
+      "cached_definition_sha256": "a507020b0b0c13c1b123338ee868efabb0dcfef85db8c08697894382b9da453b"
+    },
+    "IfcSystem": {
+      "description": "A collection of related parts organized to perform a common function or provide a service.",
+      "description_method": "source_based_paraphrase",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcGroup",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_System",
+      "explicit_class_view": "View_System",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcproductextension/lexical/ifcsystem.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcproductextension/lexical/ifcsystem.htm",
+      "cached_definition_sha256": "eee9ee13779523778b32660870ea19c3113978e9a1c23c50ef98425ed5b5ae52"
+    },
+    "IfcTask": {
+      "description": "An IfcTask is an identifiable unit of work to be carried out independently of any other units of work in a construction project.",
+      "description_method": "short_source_sentence",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcProcess",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_Task",
+      "explicit_class_view": "View_Task",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcprocessextension/lexical/ifctask.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcprocessextension/lexical/ifctask.htm",
+      "cached_definition_sha256": "7ff5b0393e50ac6b27af459216aae4b3c21b9203f2d8cdccfce023014c622438"
+    },
+    "IfcTendon": {
+      "description": "A tensioned steel wire, cable, bar, rod, or strand used to prestress concrete.",
+      "description_method": "source_based_paraphrase",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcReinforcingElement",
+        "IfcBuildingElementComponent",
+        "IfcBuildingElement",
+        "IfcElement",
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_Tendon",
+      "explicit_class_view": "View_Tendon",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcstructuralelementsdomain/lexical/ifctendon.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcstructuralelementsdomain/lexical/ifctendon.htm",
+      "cached_definition_sha256": "276e5df02672a8d324a415db30f4a98028ab4866229d8b8d7a6a8b440c438360"
+    },
+    "IfcTendonAnchor": {
+      "description": "In prestressed or posttensioned concrete, the end connection for the tendons.",
+      "description_method": "short_source_sentence",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcReinforcingElement",
+        "IfcBuildingElementComponent",
+        "IfcBuildingElement",
+        "IfcElement",
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_TendonAnchor",
+      "explicit_class_view": "View_TendonAnchor",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcstructuralelementsdomain/lexical/ifctendonanchor.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcstructuralelementsdomain/lexical/ifctendonanchor.htm",
+      "cached_definition_sha256": "e1aa510e6274e6cb11c1bd7cc05d3efd81e7dcb4aaf010bd9639b887c40c4b9c"
+    },
+    "IfcTimeSeriesSchedule": {
+      "description": "The IfcTimeSeriesSchedule defines a time-series that is applicable to to one or more calendar dates.",
+      "description_method": "short_source_sentence",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcControl",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_TimeSeriesSchedule",
+      "explicit_class_view": "View_TimeSeriesSchedule",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifccontrolextension/lexical/ifctimeseriesschedule.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifccontrolextension/lexical/ifctimeseriesschedule.htm",
+      "cached_definition_sha256": "94fb500235d971259003f52dc0a2cf9167d38cd636d47a961406c7c2511f8bad"
+    },
+    "IfcTransportElement": {
+      "description": "Generalization of all transport related objects that move people, animals or goods within a building or building complex.",
+      "description_method": "short_source_sentence",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcElement",
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_TransportElement",
+      "explicit_class_view": "View_TransportElement",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcproductextension/lexical/ifctransportelement.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcproductextension/lexical/ifctransportelement.htm",
+      "cached_definition_sha256": "4883f43ce2945d24a851726e5cbfa56a0f4bdb0f0ae677ec3e4757f8cf208f2d"
+    },
+    "IfcVirtualElement": {
+      "description": "A special element used to provide imaginary boundaries, such as between two adjacent, but not separated, spaces.",
+      "description_method": "short_source_sentence",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcElement",
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_VirtualElement",
+      "explicit_class_view": "View_VirtualElement",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcproductextension/lexical/ifcvirtualelement.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcproductextension/lexical/ifcvirtualelement.htm",
+      "cached_definition_sha256": "0be64eaa728814fba201406bc9ff66796d6eed4db61225679ebeeb9de03d3a5c"
+    },
+    "IfcWall": {
+      "description": "Vertical construction usually in masonry or in concrete which bounds or subdivides a construction works and fulfills a load bearing or retaining function.",
+      "description_method": "short_source_sentence",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcBuildingElement",
+        "IfcElement",
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_Wall",
+      "explicit_class_view": "View_Wall",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgelements/lexical/ifcwall.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgelements/lexical/ifcwall.htm",
+      "cached_definition_sha256": "aa957564df96ecb2f69a50b32fc19d3c7ea4dfbe9d7dab3d0b9fe7ea7141f530"
+    },
+    "IfcWallStandardCase": {
+      "description": "The standard wall (IfcWallStandardCase) defines a wall with certain constraints for the provision of parameters and with certain constraints for the geometric representation.",
+      "description_method": "short_source_sentence",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcWall",
+        "IfcBuildingElement",
+        "IfcElement",
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_Wall",
+      "explicit_class_view": "View_WallStandardCase",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgelements/lexical/ifcwallstandardcase.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgelements/lexical/ifcwallstandardcase.htm",
+      "cached_definition_sha256": "31c0fec7e7f1dba5183247c2c7f336e7d966571c3ba7ce857f3be94a1f9e4286"
+    },
+    "IfcWindow": {
+      "description": "Construction for closing a vertical or near vertical opening in a wall or pitched roof that will admit light and may admit fresh air.",
+      "description_method": "short_source_sentence",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcBuildingElement",
+        "IfcElement",
+        "IfcProduct",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_Window",
+      "explicit_class_view": "View_Window",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgelements/lexical/ifcwindow.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgelements/lexical/ifcwindow.htm",
+      "cached_definition_sha256": "54f2a83754a1a3ba670b223b7a47e86bc699f8901bf9e251c31229d5c1719736"
+    },
+    "IfcWorkControl": {
+      "description": "An IfcWorkControl is an abstract supertype which captures information that is common to both IfcWorkPlan and IfcWorkSchedule.",
+      "description_method": "short_source_sentence",
+      "is_abstract": true,
+      "supertypes": [
+        "IfcControl",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": null,
+      "explicit_class_view": "View_WorkControl",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcprocessextension/lexical/ifcworkcontrol.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcprocessextension/lexical/ifcworkcontrol.htm",
+      "cached_definition_sha256": "ce9eb8181008e99e99fdb1c12fc8f898eea6b4cc248103519a6d2a2473f2efe0"
+    },
+    "IfcWorkPlan": {
+      "description": "An IfcWorkPlan represents work plans in a construction or a facilities management project.",
+      "description_method": "short_source_sentence",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcWorkControl",
+        "IfcControl",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_WorkPlan",
+      "explicit_class_view": "View_WorkPlan",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcprocessextension/lexical/ifcworkplan.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcprocessextension/lexical/ifcworkplan.htm",
+      "cached_definition_sha256": "724cf9181b0d407853faa5902e2690b6a05d136c8afa71b5daf5f7490b26b5c8"
+    },
+    "IfcWorkSchedule": {
+      "description": "An IfcWorkSchedule represents a task schedule in a work plan, which in turn can contain a set of schedules for different purposes.",
+      "description_method": "short_source_sentence",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcWorkControl",
+        "IfcControl",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_WorkSchedule",
+      "explicit_class_view": "View_WorkSchedule",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcprocessextension/lexical/ifcworkschedule.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcprocessextension/lexical/ifcworkschedule.htm",
+      "cached_definition_sha256": "ceb1f6f75a976d33e7063021cf1cc4b07e6ab8f523cf1b04327c87e6c0ddce95"
+    },
+    "IfcZone": {
+      "description": "A zone (IfcZone) is an aggregation of spaces, partial spaces or other zones.",
+      "description_method": "short_source_sentence",
+      "is_abstract": false,
+      "supertypes": [
+        "IfcGroup",
+        "IfcObject",
+        "IfcObjectDefinition",
+        "IfcRoot"
+      ],
+      "default_view": "View_Zone",
+      "explicit_class_view": "View_Zone",
+      "source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcproductextension/lexical/ifczone.htm",
+      "cached_source_url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcproductextension/lexical/ifczone.htm",
+      "cached_definition_sha256": "c87dab30c8197f4b8ee13229180d5aa45c50b9fe17e15d0669252fd004a5e4f2"
+    }
+  }
+}

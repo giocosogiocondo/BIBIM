@@ -1,0 +1,52 @@
+{
+  "repository": "https://github.com/aminry/decisio",
+  "release": "v0.15.0",
+  "commit": "37976c176b8b8cfeb218b37bae17d4e23769999f",
+  "files": {
+    "src/decisio/readout/letters.py": {
+      "url": "https://raw.githubusercontent.com/aminry/decisio/37976c176b8b8cfeb218b37bae17d4e23769999f/src/decisio/readout/letters.py",
+      "sha256": "4b204ad20848f6f2fc0dd2c07f281ee606d85fb9f586fbae46916b7c98f9757d",
+      "bytes": 17403
+    },
+    "src/decisio/readout/spaced.py": {
+      "url": "https://raw.githubusercontent.com/aminry/decisio/37976c176b8b8cfeb218b37bae17d4e23769999f/src/decisio/readout/spaced.py",
+      "sha256": "8d4aba38cba4bae2c111adb34e9cce2e5ad8e689e314a3f37ea4e46e89f17d62",
+      "bytes": 552
+    },
+    "src/decisio/readout/system_prompt.py": {
+      "url": "https://raw.githubusercontent.com/aminry/decisio/37976c176b8b8cfeb218b37bae17d4e23769999f/src/decisio/readout/system_prompt.py",
+      "sha256": "35444650391fb7ca0bcc44fb175a78ea2de7284ea6fd75a62c38f637c8a52f33",
+      "bytes": 730
+    },
+    "src/decisio/families.py": {
+      "url": "https://raw.githubusercontent.com/aminry/decisio/37976c176b8b8cfeb218b37bae17d4e23769999f/src/decisio/families.py",
+      "sha256": "18873cf52c8eeec426cd51b8ac6a0579d81e3758ce80cca02173b2eee271d4fc",
+      "bytes": 14106
+    },
+    "src/decisio/serve/systemone.py": {
+      "url": "https://raw.githubusercontent.com/aminry/decisio/37976c176b8b8cfeb218b37bae17d4e23769999f/src/decisio/serve/systemone.py",
+      "sha256": "1308712ad1ff16572ddf05a9850cc1fc43cc5dd6d365dbf196ad49494b04f1d4",
+      "bytes": 84663
+    },
+    "src/decisio/serve/temperature.py": {
+      "url": "https://raw.githubusercontent.com/aminry/decisio/37976c176b8b8cfeb218b37bae17d4e23769999f/src/decisio/serve/temperature.py",
+      "sha256": "59d00c8cea149a8262839a7d352086dfe04d630990fdcc4e6ba5c2ac90e8a788",
+      "bytes": 1416
+    },
+    "LICENSE": {
+      "url": "https://raw.githubusercontent.com/aminry/decisio/37976c176b8b8cfeb218b37bae17d4e23769999f/LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358
+    },
+    "NOTICE": {
+      "url": "https://raw.githubusercontent.com/aminry/decisio/37976c176b8b8cfeb218b37bae17d4e23769999f/NOTICE",
+      "sha256": "74264bc16288e659ae23be99f4e9ba1ae1cca7aa73705daf734d8169c3aad7f6",
+      "bytes": 65
+    },
+    "THIRD-PARTY.md": {
+      "url": "https://raw.githubusercontent.com/aminry/decisio/37976c176b8b8cfeb218b37bae17d4e23769999f/THIRD-PARTY.md",
+      "sha256": "334bf29e136598cfb67feaf589eb9f6a5d1ce530489cd5832d3bb11d129189cc",
+      "bytes": 5796
+    }
+  }
+}

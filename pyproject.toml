@@ -1,0 +1,19 @@
+[tool.black]
+line-length = 99
+target-version = ["py312"]
+extend-exclude = "(\\.venv|\\.tools|outputs_v|logs)"
+
+[tool.ruff]
+line-length = 99
+target-version = "py312"
+extend-exclude = [".venv", ".tools", "outputs_v3_4_5", "logs"]
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F"]
+
+[tool.ruff.lint.per-file-ignores]
+# Standalone audit scripts bootstrap the project path before local imports.
+"tests/deep_audit.py" = ["E402"]
+"tests/summarize_deep_audit.py" = ["E402"]
+"tools/build_column_description_catalog.py" = ["E402"]
+"tools/measure_column_dictionary_context.py" = ["E402"]
