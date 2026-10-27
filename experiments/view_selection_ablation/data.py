@@ -135,7 +135,12 @@ def prepare(config, *, log=print):
             log(f"Prepared reference/inventory metadata for {len(cases)}/{len(questions)} questions...")
     model = Path(config["model_path"])
     log("Reading GGUF metadata without loading model tensors...")
-    metadata = read_metadata(model)
+    arch_kwargs = (
+        {"required_architecture": config["required_architecture"]}
+        if "required_architecture" in config
+        else {}
+    )
+    metadata = read_metadata(model, **arch_kwargs)
     maximum = max(len(inv["groups"]) for inv in inventories.values())
     labels = label_pool(metadata, max(maximum, 2))
     compact_metadata = {key: value for key, value in metadata.items()

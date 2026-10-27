@@ -7,7 +7,7 @@ from pathlib import Path
 
 import ifcopenshell
 
-from ifc_sql_views.build import build, Writer
+from ifc_sql_views import build, Writer
 from ifc_sql_views.reader import Database, quote
 from ifc_sql_views.extractor import Extractor
 from ifc_sql_views.extractor import unique

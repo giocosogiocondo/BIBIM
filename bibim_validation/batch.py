@@ -7,8 +7,7 @@ import subprocess
 import sys
 import time
 from pathlib import Path
-from bibim_config import PROJECT_ROOT
-from bibim_io import write_json
+from .values import PROJECT_ROOT, write_json
 
 
 def source_ifc(db, seen=None):

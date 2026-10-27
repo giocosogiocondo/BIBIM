@@ -62,12 +62,14 @@ class Database:
         self.source_schema = None
         metadata = {}
         if "metadata" in self.tables:
-            row = self.con.execute('SELECT * FROM metadata LIMIT 1').fetchone()
+            row = self.con.execute("SELECT * FROM metadata LIMIT 1").fetchone()
             metadata = dict(row) if row else {}
             self.source_schema = metadata.get("schema")
             version = version or self.source_schema
         self.file_header = read_header(self.con, self.tables)
-        self.source_fields = project_fields(self.file_header, self.source_schema, metadata.get("mvd"))
+        self.source_fields = project_fields(
+            self.file_header, self.source_schema, metadata.get("mvd")
+        )
         self.version = schema_name(version)
         self.schema = ifcopenshell.schema_by_name(self.version)
         self.entities = {
@@ -149,6 +151,13 @@ class Database:
 
     def close(self):
         self.con.close()
+
+    def __enter__(self):
+        return self
+
+    def __exit__(self, exc_type, exc, tb):
+        self.close()
+        return False
 
     def note(self, code, iid, attribute=None, **details):
         item = {"code": code, "ifc_id": iid, **details}

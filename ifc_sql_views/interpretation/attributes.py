@@ -3,8 +3,7 @@
 from __future__ import annotations
 from collections import defaultdict
 from functools import lru_cache
-from ..values import collapse
-from ..view_values import without_references
+from ..values import collapse, without_references
 
 
 class ObjectAttributes:

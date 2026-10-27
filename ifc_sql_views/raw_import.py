@@ -5,9 +5,8 @@ import sqlite3
 from collections import defaultdict
 from contextlib import closing
 import ifcopenshell
-from bibim_config import IMPORT_PREPROCESSOR
 from .reader import quote
-from .schemas import schema_name
+from .schemas import IMPORT_PREPROCESSOR, schema_name
 from .file_header import store_header
 
 

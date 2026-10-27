@@ -1,20 +1,22 @@
 """Coordinate raw DB reading, interpretation, writing, verification and publishing."""
 
 from __future__ import annotations
+import argparse
 import hashlib
+import json
 import os
+import sys
 import tempfile
 import time
 from pathlib import Path
 import ifcopenshell
-from bibim_config import BUILD_VERSION, CUSTOM_IDENTIFIERS
-from bibim_io import write_json
 from .catalog import Catalog
 from .column_policy import is_empty
 from .extractor import Extractor
 from .integrity import check_sqlite_integrity, check_unique_view_rows
 from .lifecycle import clear_method_caches
 from .reader import Database
+from .schemas import BUILD_VERSION, CUSTOM_IDENTIFIERS, write_json
 from .semantic import Semantic
 from .storage import Writer, copy_raw_tables
 
@@ -178,3 +180,51 @@ def build(input_path, output_path, *, schema=None, classes=None, overwrite=False
         db.close()
         if temporary and Path(temporary).exists():
             Path(temporary).unlink()
+
+
+def main(argv=None):
+    for stream in (sys.stdout, sys.stderr):
+        if hasattr(stream, "reconfigure"):
+            stream.reconfigure(encoding="utf-8")
+    parser = argparse.ArgumentParser(
+        description="Generate document-driven IFC object views from an IFC file or raw Ifc2Sql SQLite DB"
+    )
+    parser.add_argument("input", type=Path)
+    parser.add_argument("output", type=Path)
+    parser.add_argument("--schema", choices=("IFC2X3", "IFC4", "IFC4X3", "IFC4X3_ADD2"))
+    parser.add_argument(
+        "--classes", nargs="+", help="Optional entity classes; default: all object classes present"
+    )
+    parser.add_argument("--overwrite", action="store_true")
+    args = parser.parse_args(argv)
+    if args.input.suffix.lower() == ".ifc":
+        from .conversion import convert
+
+        report = convert(
+            args.input,
+            args.output,
+            schema=args.schema,
+            classes=args.classes,
+            overwrite=args.overwrite,
+        )
+    else:
+        report = build(
+            args.input,
+            args.output,
+            schema=args.schema,
+            classes=args.classes,
+            overwrite=args.overwrite,
+        )
+    print(
+        json.dumps(
+            {
+                "output": report["output"],
+                "schema": report["schema"],
+                "views": len(report["views"]),
+                "diagnostics": len(report["diagnostics"]),
+                "elapsed_seconds": report["elapsed_seconds"],
+            },
+            ensure_ascii=False,
+        )
+    )
+    return 0

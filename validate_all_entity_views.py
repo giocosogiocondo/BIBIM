@@ -3,13 +3,12 @@
 import argparse
 from datetime import datetime
 from pathlib import Path
-from bibim_config import PROJECT_ROOT, OUTPUT_ROOT
-from bibim_validation.batch import discover, source_ifc, save, run
+from bibim_validation.batch import discover, run, save, source_ifc
+from bibim_validation.values import OUTPUT_ROOT, PROJECT_ROOT
 
 __all__ = ["discover", "source_ifc", "save", "run"]
 
 if __name__ == "__main__":
-    base = PROJECT_ROOT
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--db-root", type=Path, default=OUTPUT_ROOT)
     parser.add_argument("--out", type=Path)

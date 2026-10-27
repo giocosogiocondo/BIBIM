@@ -7,16 +7,36 @@ from pathlib import Path
 import string
 import struct
 
-SCALARS = {0: "B", 1: "b", 2: "H", 3: "h", 4: "I", 5: "i", 6: "f",
-           7: "?", 10: "Q", 11: "q", 12: "d"}
-KEEP = {"general.name", "general.architecture", "general.file_type",
-        "general.quantization_version", "tokenizer.ggml.model", "tokenizer.ggml.tokens",
-        "tokenizer.ggml.bos_token_id", "tokenizer.ggml.eos_token_id",
-        "tokenizer.ggml.add_bos_token", "tokenizer.chat_template"}
+SCALARS = {
+    0: "B",
+    1: "b",
+    2: "H",
+    3: "h",
+    4: "I",
+    5: "i",
+    6: "f",
+    7: "?",
+    10: "Q",
+    11: "q",
+    12: "d",
+}
+KEEP = {
+    "general.name",
+    "general.architecture",
+    "general.file_type",
+    "general.quantization_version",
+    "tokenizer.ggml.model",
+    "tokenizer.ggml.tokens",
+    "tokenizer.ggml.bos_token_id",
+    "tokenizer.ggml.eos_token_id",
+    "tokenizer.ggml.add_bos_token",
+    "tokenizer.chat_template",
+}
 
 
-def read_metadata(path):
+def read_metadata(path, *, required_architecture: str | None = "gemma4"):
     with Path(path).open("rb") as stream:
+
         def integer():
             raw = stream.read(8)
             if len(raw) != 8:
@@ -74,21 +94,33 @@ def read_metadata(path):
             if key in KEEP:
                 result[key] = item
         result["metadata_end_offset"] = stream.tell()
-    if result.get("general.architecture") != "gemma4":
-        raise ValueError("This experiment profile requires a Gemma 4 GGUF")
+    if (
+        required_architecture not in (None, "any", "*")
+        and result.get("general.architecture") != required_architecture
+    ):
+        label = "Gemma 4" if required_architecture == "gemma4" else required_architecture
+        raise ValueError(f"This experiment profile requires a {label} GGUF")
     return result
 
 
 def label_pool(metadata, count=255):
     tokens = metadata["tokenizer.ggml.tokens"]
     vocab = {token: index for index, token in enumerate(tokens)}
-    codes = itertools.chain(string.ascii_uppercase,
-                            (a + b for a in string.ascii_uppercase for b in string.ascii_uppercase))
+    codes = itertools.chain(
+        string.ascii_uppercase,
+        (a + b for a in string.ascii_uppercase for b in string.ascii_uppercase),
+    )
     result = []
     used = set()
     for code in codes:
-        spaced = next((vocab[prefix + code] for prefix in ("\u2581", "\u0120", " ")
-                       if prefix + code in vocab), None)
+        spaced = next(
+            (
+                vocab[prefix + code]
+                for prefix in ("\u2581", "\u0120", " ")
+                if prefix + code in vocab
+            ),
+            None,
+        )
         if spaced is None:
             continue
         forms = [spaced]

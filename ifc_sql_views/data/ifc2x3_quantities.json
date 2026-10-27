@@ -1,0 +1,190 @@
+{
+  "schema": "IFC2X3",
+  "description": "Quantity Use Definitions from IFC2x3 TC1 entity documentation. No IFC4 Qto backport. Empty entries mean no entity-local quantity list; superclass quantities still apply.",
+  "entities": {
+    "IfcBeam": {
+      "source": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgelements/lexical/ifcbeam.htm",
+      "quantities": {
+        "NominalLength": "IfcQuantityLength",
+        "CrossSectionArea": "IfcQuantityArea",
+        "OuterSurfaceArea": "IfcQuantityArea",
+        "TotalSurfaceArea": "IfcQuantityArea",
+        "GrossVolume": "IfcQuantityVolume",
+        "NetVolume": "IfcQuantityVolume",
+        "GrossWeight": "IfcQuantityWeight",
+        "NetWeight": "IfcQuantityWeight"
+      }
+    },
+    "IfcBuilding": {
+      "source": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcproductextension/lexical/ifcbuilding.htm",
+      "quantities": {
+        "NominalHeight": "IfcQuantityLength",
+        "NominalArea": "IfcQuantityArea",
+        "GrossFloorArea": "IfcQuantityArea",
+        "NetFloorArea": "IfcQuantityArea",
+        "GrossVolume": "IfcQuantityVolume",
+        "NetVolume": "IfcQuantityVolume"
+      }
+    },
+    "IfcBuildingElement": {
+      "source": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcproductextension/lexical/ifcbuildingelement.htm",
+      "quantities": {}
+    },
+    "IfcBuildingElementProxy": {
+      "source": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcproductextension/lexical/ifcbuildingelementproxy.htm",
+      "quantities": {}
+    },
+    "IfcBuildingStorey": {
+      "source": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcproductextension/lexical/ifcbuildingstorey.htm",
+      "quantities": {
+        "NominalHeight": "IfcQuantityLength",
+        "GrossFloorArea": "IfcQuantityArea",
+        "NetFloorArea": "IfcQuantityArea",
+        "GrossVolume": "IfcQuantityVolume",
+        "NetVolume": "IfcQuantityVolume"
+      }
+    },
+    "IfcColumn": {
+      "source": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgelements/lexical/ifccolumn.htm",
+      "quantities": {
+        "NominalLength": "IfcQuantityLength",
+        "CrossSectionArea": "IfcQuantityArea",
+        "OuterSurfaceArea": "IfcQuantityArea",
+        "TotalSurfaceArea": "IfcQuantityArea",
+        "GrossVolume": "IfcQuantityVolume",
+        "NetVolume": "IfcQuantityVolume",
+        "GrossWeight": "IfcQuantityWeight",
+        "NetWeight": "IfcQuantityWeight"
+      }
+    },
+    "IfcCovering": {
+      "source": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcproductextension/lexical/ifccovering.htm",
+      "quantities": {
+        "GrossArea": "IfcQuantityArea",
+        "NetArea": "IfcQuantityArea"
+      }
+    },
+    "IfcCurtainWall": {
+      "source": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgelements/lexical/ifccurtainwall.htm",
+      "quantities": {}
+    },
+    "IfcDoor": {
+      "source": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgelements/lexical/ifcdoor.htm",
+      "quantities": {}
+    },
+    "IfcElement": {
+      "source": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcproductextension/lexical/ifcelement.htm",
+      "quantities": {}
+    },
+    "IfcFooting": {
+      "source": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcstructuralelementsdomain/lexical/ifcfooting.htm",
+      "quantities": {}
+    },
+    "IfcMember": {
+      "source": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgelements/lexical/ifcmember.htm",
+      "quantities": {
+        "NominalLength": "IfcQuantityLength",
+        "CrossSectionArea": "IfcQuantityArea",
+        "OuterSurfaceArea": "IfcQuantityArea",
+        "TotalSurfaceArea": "IfcQuantityArea",
+        "GrossVolume": "IfcQuantityVolume",
+        "NetVolume": "IfcQuantityVolume",
+        "GrossWeight": "IfcQuantityWeight",
+        "NetWeight": "IfcQuantityWeight"
+      }
+    },
+    "IfcPile": {
+      "source": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcstructuralelementsdomain/lexical/ifcpile.htm",
+      "quantities": {}
+    },
+    "IfcPlate": {
+      "source": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgelements/lexical/ifcplate.htm",
+      "quantities": {}
+    },
+    "IfcRailing": {
+      "source": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgelements/lexical/ifcrailing.htm",
+      "quantities": {}
+    },
+    "IfcRamp": {
+      "source": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgelements/lexical/ifcramp.htm",
+      "quantities": {}
+    },
+    "IfcRampFlight": {
+      "source": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgelements/lexical/ifcrampflight.htm",
+      "quantities": {}
+    },
+    "IfcRoof": {
+      "source": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgelements/lexical/ifcroof.htm",
+      "quantities": {
+        "TotalSurfaceArea": "IfcQuantityArea"
+      }
+    },
+    "IfcSite": {
+      "source": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcproductextension/lexical/ifcsite.htm",
+      "quantities": {
+        "NominalPerimeter": "IfcQuantityLength",
+        "NominalArea": "IfcQuantityArea"
+      }
+    },
+    "IfcSlab": {
+      "source": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgelements/lexical/ifcslab.htm",
+      "quantities": {
+        "NominalWidth": "IfcQuantityLength",
+        "Perimeter": "IfcQuantityLength",
+        "GrossArea": "IfcQuantityArea",
+        "NetArea": "IfcQuantityArea",
+        "GrossVolume": "IfcQuantityVolume",
+        "NetVolume": "IfcQuantityVolume",
+        "GrossWeight": "IfcQuantityWeight",
+        "NetWeight": "IfcQuantityWeight"
+      }
+    },
+    "IfcSpace": {
+      "source": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcproductextension/lexical/ifcspace.htm",
+      "quantities": {
+        "NominalHeight": "IfcQuantityLength",
+        "ClearHeight": "IfcQuantityLength",
+        "GrossPerimeter": "IfcQuantityLength",
+        "NetPerimeter": "IfcQuantityLength",
+        "GrossFloorArea": "IfcQuantityArea",
+        "NetFloorArea": "IfcQuantityArea",
+        "GrossCeilingArea": "IfcQuantityArea",
+        "NetCeilingArea": "IfcQuantityArea",
+        "GrossWallArea": "IfcQuantityArea",
+        "NetWallArea": "IfcQuantityArea",
+        "GrossVolume": "IfcQuantityVolume",
+        "NetVolume": "IfcQuantityVolume"
+      }
+    },
+    "IfcStair": {
+      "source": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgelements/lexical/ifcstair.htm",
+      "quantities": {}
+    },
+    "IfcStairFlight": {
+      "source": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgelements/lexical/ifcstairflight.htm",
+      "quantities": {}
+    },
+    "IfcWall": {
+      "source": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgelements/lexical/ifcwall.htm",
+      "quantities": {
+        "NominalLength": "IfcQuantityLength",
+        "NominalWidth": "IfcQuantityLength",
+        "NominalHeight": "IfcQuantityLength",
+        "GrossFootprintArea": "IfcQuantityArea",
+        "NetFootprintArea": "IfcQuantityArea",
+        "GrossSideArea": "IfcQuantityArea",
+        "NetSideArea": "IfcQuantityArea",
+        "GrossSideAreaLeft": "IfcQuantityArea",
+        "NetSideAreaLeft": "IfcQuantityArea",
+        "GrossSideAreaRight": "IfcQuantityArea",
+        "NetSideAreaRight": "IfcQuantityArea",
+        "GrossVolume": "IfcQuantityVolume",
+        "NetVolume": "IfcQuantityVolume"
+      }
+    },
+    "IfcWindow": {
+      "source": "https://standards.buildingsmart.org/IFC/RELEASE/IFC2x3/TC1/HTML/ifcsharedbldgelements/lexical/ifcwindow.htm",
+      "quantities": {}
+    }
+  }
+}

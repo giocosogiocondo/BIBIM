@@ -27,8 +27,17 @@ Identifier and etc payload values are omitted. Long values are marked preview/tr
 No column descriptions, JSON-key inventories, reference SQL, or benchmark answers are supplied."""
 
 
-def messages(question, views, schemas, profiles=None, descriptions=None, inspections=None,
-             view_scores=None, feedback=None):
+def messages(
+    question,
+    views,
+    schemas,
+    profiles=None,
+    descriptions=None,
+    inspections=None,
+    view_scores=None,
+    feedback=None,
+    etc_keys=None,
+):
     if profiles is None:
         listing = "\n\n".join(
             quote(view) + " (\n  " + ",\n  ".join(quote(c) for c in schemas[view]) + "\n)"
@@ -62,6 +71,20 @@ def messages(question, views, schemas, profiles=None, descriptions=None, inspect
             if lines:
                 definitions.append(quote(view) + ":\n" + "\n".join(lines))
         listing += "\n\nColumn descriptions (English):\n" + "\n\n".join(definitions)
+    if etc_keys:
+        etc_sections = []
+        for view in views:
+            keys = etc_keys.get(view) or ()
+            if keys and "etc" in schemas.get(view, ()):
+                etc_sections.append(
+                    quote(view) + ".etc JSON keys: " + ", ".join(quote(k) for k in keys)
+                )
+        if etc_sections:
+            rules = rules.replace("No JSON-key inventories, ", "No ").replace(
+                "or JSON-key inventories ", ""
+            )
+            rules += "\nSparse/overflow etc JSON keys from the build manifest are listed below; access them via json_extract(\"etc\", '$.\"<key>\"')."
+            listing += "\n\nSparse etc JSON keys:\n" + "\n".join(etc_sections)
     chat = [
         {"role": "system", "content": SYSTEM + rules},
         {
@@ -70,16 +93,28 @@ def messages(question, views, schemas, profiles=None, descriptions=None, inspect
         },
     ]
     if view_scores is not None:
-        chat[1]['content'] += '\n\n' + score_context(view_scores)
+        chat[1]["content"] += "\n\n" + score_context(view_scores)
     if feedback:
-        chat[0]['content'] += ('\nUse the earlier SQL attempts, execution errors/results and answerability findings '
-                               'to revise the query. Address the stated failure or missing support; '
-                               'retain verified missing values and disclose assumptions rather than treating them as zero.')
-        chat.append({'role': 'user', 'content': json.dumps(
-            {'earlier_main_sql_attempts': feedback}, ensure_ascii=False)})
+        chat[0]["content"] += (
+            "\nUse the earlier SQL attempts, execution errors/results and answerability findings "
+            "to revise the query. Address the stated failure or missing support; "
+            "retain verified missing values and disclose assumptions rather than treating them as zero."
+        )
+        chat.append(
+            {
+                "role": "user",
+                "content": json.dumps({"earlier_main_sql_attempts": feedback}, ensure_ascii=False),
+            }
+        )
     if inspections:
-        chat.append({"role": "user", "content": json.dumps(
-            {"observed_inspection_queries_and_results": inspections}, ensure_ascii=False)})
+        chat.append(
+            {
+                "role": "user",
+                "content": json.dumps(
+                    {"observed_inspection_queries_and_results": inspections}, ensure_ascii=False
+                ),
+            }
+        )
     return chat
 
 
@@ -97,20 +132,41 @@ class SQLGenerator:
     def __init__(self, client, config):
         self.client, self.config = client, config
 
-    def generate(self, question, views, schemas, profiles=None, descriptions=None, inspections=None,
-                 view_scores=None, feedback=None):
+    def generate(
+        self,
+        question,
+        views,
+        schemas,
+        profiles=None,
+        descriptions=None,
+        inspections=None,
+        view_scores=None,
+        feedback=None,
+        etc_keys=None,
+    ):
         if self.config.get("column_descriptions", False) and descriptions is None:
             raise ValueError(
                 "Column descriptions are required; refusing a statistics-only fallback"
             )
-        chat = messages(question, views, schemas, profiles, descriptions, inspections,
-                        view_scores, feedback)
+        chat = messages(
+            question,
+            views,
+            schemas,
+            profiles,
+            descriptions,
+            inspections,
+            view_scores,
+            feedback,
+            etc_keys=etc_keys,
+        )
         result = self.complete(chat)
         return {**result, "sql": extract_sql(result["content"])}
 
     def complete(self, chat, *, max_new_tokens=None, response_schema=None):
         started = time.perf_counter()
-        output_budget = self.config["max_new_tokens"] if max_new_tokens is None else max_new_tokens
+        output_budget = (
+            self.config["max_new_tokens"] if max_new_tokens is None else max_new_tokens
+        )
         prompt = self.client.request(
             "/apply-template",
             {

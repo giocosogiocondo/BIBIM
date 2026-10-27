@@ -7,7 +7,7 @@ from contextlib import closing
 from pathlib import Path
 
 import ifcopenshell
-from ifc_sql_views.import_ifc import convert
+from ifc_sql_views import convert
 from validate_entity_views import validate, same
 
 

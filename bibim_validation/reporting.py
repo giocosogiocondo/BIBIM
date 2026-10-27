@@ -2,7 +2,7 @@
 
 import json
 import csv
-from bibim_io import write_json
+from .values import write_json
 
 
 def write_entity_reports(output, result):

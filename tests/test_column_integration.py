@@ -7,9 +7,8 @@ from pathlib import Path
 
 import ifcopenshell
 
-from ifc_sql_views.build import build
+from ifc_sql_views import build, convert
 from ifc_sql_views.column_policy import compact_entity_columns
-from ifc_sql_views.import_ifc import convert
 from test_provenance import provenance_fixture
 from test_documented_views import fixture
 

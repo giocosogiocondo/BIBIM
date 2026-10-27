@@ -6,8 +6,7 @@ from collections import Counter, defaultdict
 import ifcopenshell
 import ifcopenshell.util.placement
 import ifcopenshell.util.unit
-import numpy as np
-from .values import collapse, canonical
+from .values import IDENTITY_4X4, canonical, collapse, transform_point
 
 
 class EntityValidation:
@@ -175,15 +174,12 @@ class EntityValidation:
                 matrix = (
                     ifcopenshell.util.placement.get_local_placement(parent)
                     if parent
-                    else np.eye(4)
+                    else IDENTITY_4X4
                 )
-                xyz = matrix @ np.array(
-                    list(placement.RelativePlacement.Location.Coordinates)
-                    + ([0.0] if len(placement.RelativePlacement.Location.Coordinates) == 2 else [])
-                    + [1.0]
+                xyz = transform_point(
+                    matrix,
+                    placement.RelativePlacement.Location.Coordinates,
                 )
-                if not np.isfinite(matrix).all() or not np.isfinite(xyz).all():
-                    raise ValueError("invalid parent frame or location")
                 for i, axis in enumerate("XYZ"):
                     self.check(
                         entity,

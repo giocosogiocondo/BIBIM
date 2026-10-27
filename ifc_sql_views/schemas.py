@@ -1,7 +1,15 @@
-"""Supported schema releases; IFC4X3 means the bundled ADD2 schema, never IFC4."""
+"""Supported schema releases, version metadata, and JSON manifest output."""
 
+from __future__ import annotations
+
+import json
+from pathlib import Path
 import ifcopenshell
 
+VERSION = "3.4.7.2"
+BUILD_VERSION = f"BIBIM-{VERSION}"
+IMPORT_PREPROCESSOR = f"{BUILD_VERSION}-typed-IFC-import"
+CUSTOM_IDENTIFIERS = ("ifc_id", "ifc_class", "GlobalId", "Name")
 SUPPORTED_SCHEMAS = ("IFC2X3", "IFC4", "IFC4X3_ADD2")
 
 
@@ -22,3 +30,13 @@ def schema_name(value):
 
 def template_schema(value):
     return "IFC4X3" if schema_name(value) == "IFC4X3_ADD2" else schema_name(value)
+
+
+def write_json(path, data, *, allow_nan=True):
+    target = Path(path)
+    target.parent.mkdir(parents=True, exist_ok=True)
+    target.write_text(
+        json.dumps(data, ensure_ascii=False, indent=2, allow_nan=allow_nan),
+        encoding="utf-8",
+    )
+    return target

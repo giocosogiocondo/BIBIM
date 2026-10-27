@@ -13,8 +13,7 @@ import ifcopenshell
 import ifcopenshell.util.doc as doc
 from ifcopenshell.util.pset import PsetQto
 
-from bibim_config import VERSION
-from ifc_sql_views.schemas import template_schema
+from ifc_sql_views.schemas import VERSION, template_schema
 
 REVISION = "3.4.5.1"
 SCHEMAS = {

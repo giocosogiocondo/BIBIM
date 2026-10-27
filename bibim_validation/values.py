@@ -3,9 +3,53 @@
 from __future__ import annotations
 import json
 import math
+from pathlib import Path
 import ifcopenshell
 import ifcopenshell.util.placement
 import ifcopenshell.util.unit
+
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+OUTPUT_ROOT = PROJECT_ROOT / "outputs"
+IDENTITY_4X4 = (
+    (1.0, 0.0, 0.0, 0.0),
+    (0.0, 1.0, 0.0, 0.0),
+    (0.0, 0.0, 1.0, 0.0),
+    (0.0, 0.0, 0.0, 1.0),
+)
+
+
+def write_json(path, data, *, allow_nan=True):
+    target = Path(path)
+    target.parent.mkdir(parents=True, exist_ok=True)
+    target.write_text(
+        json.dumps(data, ensure_ascii=False, indent=2, allow_nan=allow_nan),
+        encoding="utf-8",
+    )
+    return target
+
+
+def matrix_is_finite(matrix) -> bool:
+    try:
+        return all(math.isfinite(float(cell)) for row in matrix for cell in row)
+    except (TypeError, ValueError):
+        return False
+
+
+def transform_point(matrix, coordinates) -> tuple[float, float, float]:
+    """Transform a 2D/3D point by a 4x4 homogeneous placement matrix without numpy."""
+    coords = list(coordinates)
+    if len(coords) == 2:
+        coords.append(0.0)
+    if len(coords) != 3:
+        raise ValueError("Invalid point coordinate length")
+    vec = [float(coords[0]), float(coords[1]), float(coords[2]), 1.0]
+    if not matrix_is_finite(matrix) or not all(math.isfinite(x) for x in vec):
+        raise ValueError("invalid parent frame or location")
+    rows = [[float(cell) for cell in row] for row in matrix]
+    xyz = tuple(sum(rows[i][j] * vec[j] for j in range(4)) for i in range(3))
+    if not all(math.isfinite(x) for x in xyz):
+        raise ValueError("invalid parent frame or location")
+    return xyz
 
 
 def quote(s):
@@ -87,6 +131,7 @@ def unit_label(u):
             "GRAM": "g",
             "SECOND": "s",
             "RADIAN": "rad",
+            "STERADIAN": "sr",
             "KELVIN": "K",
             "DEGREE_CELSIUS": "degC",
             "NEWTON": "N",
@@ -96,6 +141,20 @@ def unit_label(u):
             "AMPERE": "A",
             "VOLT": "V",
             "HERTZ": "Hz",
+            "OHM": "ohm",
+            "FARAD": "F",
+            "COULOMB": "C",
+            "HENRY": "H",
+            "SIEMENS": "S",
+            "TESLA": "T",
+            "WEBER": "Wb",
+            "LUX": "lx",
+            "LUMEN": "lm",
+            "CANDELA": "cd",
+            "BECQUEREL": "Bq",
+            "GRAY": "Gy",
+            "SIEVERT": "Sv",
+            "MOLE": "mol",
         }
         return ifcopenshell.util.unit.prefix_symbols.get(u.Prefix, u.Prefix or "") + symbols.get(
             u.Name, u.Name

@@ -1,4 +1,4 @@
-from ifc_sql_views.build import main
+from ifc_sql_views.pipeline import main
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())

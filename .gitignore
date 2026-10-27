@@ -8,13 +8,13 @@ __pycache__/
 .cache/
 .tools/
 # Local inputs, model/runtime binaries and generated outputs
-data/
-models/
-runtime/
-outputs*/
-results/
-logs/
-prepared*/
+/data/
+/models/
+/runtime/
+/outputs*/
+/results/
+/logs/
+/prepared*/
 *.ifc
 *.ifczip
 *.gguf

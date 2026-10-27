@@ -7,8 +7,7 @@ from contextlib import closing
 from pathlib import Path
 
 import ifcopenshell
-from ifc_sql_views.import_ifc import convert
-from ifc_sql_views.build import build
+from ifc_sql_views import build, convert
 from ifc_sql_views.reader import Database
 from ifc_sql_views.catalog import Catalog
 from ifc_sql_views.extractor import Extractor

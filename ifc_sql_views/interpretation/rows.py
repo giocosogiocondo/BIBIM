@@ -5,8 +5,8 @@ from collections import defaultdict
 import hashlib
 import json
 import re
-from ..view_values import without_references
-from bibim_config import CUSTOM_IDENTIFIERS
+from ..schemas import CUSTOM_IDENTIFIERS
+from ..values import without_references
 
 
 class EntityRowComposition:

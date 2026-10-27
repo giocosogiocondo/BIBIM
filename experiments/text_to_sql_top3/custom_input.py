@@ -56,7 +56,16 @@ def prepare_custom(config, log=print):
     for k in ("model_path", "llama_server", "cuda_dll_directory"):
         backend[k] = str(resolve(backend[k]))
     log("Reading local GGUF label metadata (no model loading)...")
-    metadata = read_metadata(Path(backend["model_path"]))
+    arch_kwargs = (
+        {
+            "required_architecture": backend.get(
+                "required_architecture", config.get("required_architecture")
+            )
+        }
+        if "required_architecture" in backend or "required_architecture" in config
+        else {}
+    )
+    metadata = read_metadata(Path(backend["model_path"]), **arch_kwargs)
     labels = label_pool(metadata, max(2, max(len(i["groups"]) for i in inventories.values())))
     log("Pinning local model and server files...")
     model = file_pin(backend["model_path"], full_hash=True)

@@ -10,12 +10,17 @@ from collections import Counter
 from contextlib import closing
 from pathlib import Path
 import ifcopenshell
-from bibim_config import BUILD_VERSION
-from bibim_io import write_json
 from .pipeline import build
 from .integrity import check_raw_entity_counts, check_sqlite_integrity
 from .raw_import import raw_database
-from .schemas import schema_name
+from .schemas import BUILD_VERSION, schema_name, write_json
+
+_STEP_COMMENT_OR_STRING = re.compile(rb"/\*.*?\*/|'(?:''|[^'])*'", re.S)
+
+
+def strip_step_literals_and_comments(data: bytes) -> bytes:
+    """Blank out STEP comments and string literals while preserving line structure."""
+    return _STEP_COMMENT_OR_STRING.sub(lambda m: b"\n" * m.group(0).count(b"\n"), data)
 
 
 def read_ifc(source, log):
@@ -26,7 +31,8 @@ def read_ifc(source, log):
         raise ValueError(
             "IFC에 NUL 손상이 있습니다. 원본을 다시 받아야 합니다. 손상된 노드를 자동 삭제하지 않습니다."
         )
-    expected_ids = {int(x) for x in re.findall(rb"(?m)^\s*#(\d+)\s*=", original)}
+    sanitized = strip_step_literals_and_comments(original)
+    expected_ids = {int(x) for x in re.findall(rb"(?m)^\s*#(\d+)\s*=", sanitized)}
     log(f"IFC 읽기: {source.name}")
     model = ifcopenshell.open(str(source))
     schema_name(model.schema_identifier)
@@ -58,7 +64,7 @@ def finish_report(report, model, source, destination, original, count):
     )
 
 
-def convert(source, destination, *, overwrite=False, log=print):
+def convert(source, destination, *, schema=None, classes=None, overwrite=False, log=print):
     source, destination = Path(source).resolve(), Path(destination).resolve()
     if source == destination:
         raise ValueError("입력과 출력 경로가 같습니다.")
@@ -71,7 +77,7 @@ def convert(source, destination, *, overwrite=False, log=print):
         log(f"원시 DB 생성: {total:,}개 엔티티")
         count = raw_database(model, raw)
         log("DOCS 기반 View 생성 중...")
-        report = build(raw, output, log=log)
+        report = build(raw, output, schema=schema, classes=classes, log=log)
         log("원시 테이블 병합 및 무결성 검사...")
         with closing(sqlite3.connect(output)) as con:
             check_raw_entity_counts(con, model, count)

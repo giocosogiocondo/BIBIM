@@ -1,8 +1,8 @@
 """Public semantic facade combining placement, resource, attribute and row roles."""
 
-from bibim_config import CUSTOM_IDENTIFIERS
 from .geometry_math import IDENTITY_MATRIX, multiply, normalized, cross
-from .view_values import without_references
+from .schemas import CUSTOM_IDENTIFIERS
+from .values import without_references
 from .interpretation.placement import PlacementInterpretation
 from .interpretation.resources import ResourceInterpretation
 from .interpretation.owner import OwnerInterpretation

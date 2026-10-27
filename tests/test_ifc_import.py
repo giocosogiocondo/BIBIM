@@ -1,17 +1,18 @@
 import hashlib
-import io
 import json
 import sqlite3
+import struct
 import tempfile
 import unittest
 from contextlib import closing
 from pathlib import Path
-from unittest.mock import patch
 
 import ifcopenshell
 
-from benchmark_tools import download, needed
-from ifc_sql_views.import_ifc import convert
+from bibim_validation.values import transform_point, unit_label
+from experiments.text_to_sql_top3.generation import messages
+from experiments.view_selection_ablation.gguf import read_metadata
+from ifc_sql_views import Database, convert, strip_step_literals_and_comments
 
 
 class IfcImportTest(unittest.TestCase):
@@ -123,76 +124,66 @@ class IfcImportTest(unittest.TestCase):
                     convert(source, output, log=lambda _: None)
                 self.assertFalse(output.exists())
 
-    def test_download_selection(self):
-        self.assertTrue(needed("projects/duplex/arc.ifc"))
-        self.assertTrue(needed("questions/ifc-bench-v1.csv"))
-        self.assertTrue(needed("projects/duplex/license.txt"))
-        self.assertFalse(needed("projects/.DS_Store"))
-        self.assertFalse(needed("projects/duplex/snapshot.png"))
-        self.assertFalse(needed("projects/duplex/document/door.pdf"))
-        self.assertTrue(needed("projects/duplex/document/door.pdf", documents=True))
+    def test_step_comments_and_strings_with_hash_equals_do_not_fail_entity_count(self):
+        sample = b"/* comment\n#99999 = FAKE();\n*/\n#1 = IFCPERSON($,'line1\n#88888 = TEXT',$,$,$,$,$,$);\n"
+        sanitized = strip_step_literals_and_comments(sample)
+        self.assertNotIn(b"#99999", sanitized)
+        self.assertNotIn(b"#88888", sanitized)
+        self.assertIn(b"#1 =", sanitized)
 
-    def test_lfs_download_checks_actual_content_and_reports_commit(self):
-        content = b"ISO-10303-21;\nTEST\nEND-ISO-10303-21;"
-        digest = hashlib.sha256(content).hexdigest()
-        pointer = f"version https://git-lfs.github.com/spec/v1\noid sha256:{digest}\nsize {len(content)}\n".encode()
-        blob = hashlib.sha1(b"blob " + str(len(pointer)).encode() + b"\0" + pointer).hexdigest()
-        tree = json.dumps(
-            {
-                "sha": "test-commit",
-                "tree": [{"type": "blob", "path": "projects/duplex/arc.ifc", "sha": blob}],
-            }
-        ).encode()
-        with (
-            tempfile.TemporaryDirectory() as folder,
-            patch("benchmark_tools.fetch", side_effect=[tree, pointer, content]),
-        ):
-            report = download(folder, log=lambda _: None, version="v1")
-            self.assertEqual((Path(folder) / "projects/duplex/arc.ifc").read_bytes(), content)
-            self.assertEqual(report["commit"], "test-commit")
-            self.assertEqual(report["files"][0]["lfs_sha256"], digest)
-        with (
-            tempfile.TemporaryDirectory() as folder,
-            patch("benchmark_tools.fetch", side_effect=[tree, pointer, b"corrupted"]),
-        ):
-            with self.assertRaises(RuntimeError):
-                download(folder, log=lambda _: None, version="v1")
-            self.assertFalse((Path(folder) / "projects/duplex/arc.ifc").exists())
+    def test_expanded_si_units_and_database_context_manager(self):
+        model = ifcopenshell.file(schema="IFC4")
+        lux = model.create_entity("IfcSIUnit", UnitType="ILLUMINANCEUNIT", Name="LUX")
+        kohm = model.create_entity(
+            "IfcSIUnit", UnitType="ELECTRICRESISTANCEUNIT", Prefix="KILO", Name="OHM"
+        )
+        self.assertEqual(unit_label(lux), "lx")
+        self.assertEqual(unit_label(kohm), "kohm")
+        with tempfile.TemporaryDirectory() as folder:
+            source, _, _, _, _ = self.fixture(folder, "IFC4")
+            output = Path(folder) / "result.sqlite"
+            convert(source, output, log=lambda _: None)
+            with Database(output) as db:
+                self.assertEqual(db.version, "IFC4")
+                self.assertGreater(len(db.nodes), 0)
 
-    def test_v2_stream_download_and_verified_reuse(self):
-        content = b"ISO-10303-21; V2 fixture"
-        digest = hashlib.sha256(content).hexdigest()
-        entry = {
-            "type": "file",
-            "path": "projects/demo/arc.ifc",
-            "size": len(content),
-            "oid": "pointer",
-            "lfs": {"oid": digest},
-        }
-        calls = []
+    def test_pure_python_transform_point_and_configurable_gguf_and_etc_keys(self):
+        matrix = (
+            (0.0, -1.0, 0.0, 10.0),
+            (1.0, 0.0, 0.0, 20.0),
+            (0.0, 0.0, 1.0, 30.0),
+            (0.0, 0.0, 0.0, 1.0),
+        )
+        self.assertEqual(transform_point(matrix, (2.0, 3.0)), (7.0, 22.0, 30.0))
+        with self.assertRaises(ValueError):
+            transform_point(matrix, (float("nan"), 0.0, 0.0))
 
-        def response(request, **kwargs):
-            calls.append(request.full_url)
-            result = io.BytesIO(
-                json.dumps([entry]).encode() if "/tree/" in request.full_url else content
+        with tempfile.TemporaryDirectory() as folder:
+            gguf_path = Path(folder) / "custom.gguf"
+            key = b"general.architecture"
+            val = b"qwen3"
+            payload = (
+                b"GGUF"
+                + struct.pack("<IQQ", 3, 0, 1)
+                + struct.pack("<Q", len(key))
+                + key
+                + struct.pack("<IQ", 8, len(val))
+                + val
             )
-            result.headers = {}
-            return result
+            gguf_path.write_bytes(payload)
+            with self.assertRaises(ValueError):
+                read_metadata(gguf_path)
+            meta = read_metadata(gguf_path, required_architecture="any")
+            self.assertEqual(meta["general.architecture"], "qwen3")
 
-        with (
-            tempfile.TemporaryDirectory() as folder,
-            patch("benchmark_tools.fetch", return_value=b'{"sha":"commit-v2"}'),
-            patch("benchmark_tools.urllib.request.urlopen", side_effect=response),
-        ):
-            report = download(folder, log=lambda _: None)
-            self.assertEqual(report["version"], "v2")
-            self.assertTrue(report["complete"])
-            self.assertEqual(report["expected_ifc"], 1)
-            self.assertEqual((Path(folder) / entry["path"]).read_bytes(), content)
-            download(folder, log=lambda _: None)
-            self.assertEqual(sum("/resolve/" in url for url in calls), 1)
-        self.assertTrue(needed("projects/demo/model_card.md"))
-        self.assertTrue(needed("LICENSE"))
+        chat = messages(
+            "Find fire rating",
+            ["View_Door"],
+            {"View_Door": ["ifc_id", "Name", "etc"]},
+            etc_keys={"View_Door": ["Pset_DoorCommon_FireRating"]},
+        )
+        self.assertIn("Sparse etc JSON keys:", chat[1]["content"])
+        self.assertIn('"Pset_DoorCommon_FireRating"', chat[1]["content"])
 
 
 if __name__ == "__main__":

@@ -3,9 +3,8 @@
 from __future__ import annotations
 from functools import lru_cache
 import json
-from ..values import collapse
 from ..reader import unpack
-from ..view_values import without_references
+from ..values import collapse, without_references
 
 
 class ResourceInterpretation:
