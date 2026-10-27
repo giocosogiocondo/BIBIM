@@ -1,7 +1,4 @@
 # BIBIM
-
-Document-driven IFC-to-SQLite semantic views (`IFC2X3`, `IFC4`, `IFC4X3_ADD2`), independent source-to-view validation, schema-wide column/view description catalogs, and local Text-to-SQL evaluation.
-
 ## Setup
 
 Use Python 3.12 or newer:
