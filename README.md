@@ -19,13 +19,6 @@ python -m venv .venv
 .venv\Scripts\python build_documented_views.py data/model.ifc outputs/demo/model.sqlite
 ```
 
-## Validate generated Views against the source IFC
-
-```powershell
-.venv\Scripts\python validate_entity_views.py data/model.ifc outputs/demo/model.sqlite --out outputs/audit
-.venv\Scripts\python validate_all_entity_views.py --db-root outputs/demo
-```
-
 ## Run Text-to-SQL
 
 Copy `configs/backend.example.json` and `configs/pipeline.example.json` to `configs/backend.local.json` and `configs/pipeline.local.json`, then configure your GGUF model, `llama-server`, questions CSV, and database paths:
